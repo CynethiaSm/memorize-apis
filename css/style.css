@@ -1,3 +1,18 @@
 html,body {
     background-color: rgba(50, 115, 220, 0.3);
 }
+
+/*To toggle left side panel*/
+.hidden {
+    display: none;
+}
+
+/*Titles above each gif*/
+.gif-titles {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    font-variant: small-caps;
+    text-shadow: 2px 4px 10px rgb(240, 207, 164);
+}
