@@ -15,10 +15,12 @@
       <div class="section">
          <div class="box">
             <h1 class="title">
-               Hello World
+               Version 2022.3
+               <button class="top-button add-button button is-light button is-small">Add</button>
+               <button class="top-button restart-button button is-light button is-small">Restart</button>
             </h1>
             <p class="subtitle">
-               <progress class="progress is-primary" value="50" max="100">15%</progress>
+               <progress class="progress is-primary" id="progress-bar" value="0" max="100">15%</progress>
             </p>
          </div>
         </div>
@@ -35,27 +37,59 @@
                   <button class="button is-success is-outlined is-light mb-4 button is-small is-fullwidth ">Main</button>
                   <ul class="menu-list unity-engine">
                      <li>
-                        <a class="is-active unity-engine-label1" data-target="engine-submenu1">Unity Engine</a>
-                        <ul class="unity-engine-submenu1 hidden" id="unity-engine-submenu1">
-                           <li><a>One</a></li>
-                           <ul class="menu-list">
+                        <a class="is-active unity-engine-label1">Unity Engine</a>
+                        <ul class="unity-engine-submenu1 hidden">
+                          <li><a class="unity-engine-namespace1">UnityEngine.AI</a></li>
+                           <ul class="menu-list unity-engine-sublayer1 hidden">
                             <li>
                                <ul>
-                                  <li><a>One</a></li>
-                                  <li><a>Two</a></li>
-                                  <li><a>Three</a></li>
+                                  <li><a>Classes</a></li>
+                                  <li><a>Enumerations-(Enum)</a></li>
                                </ul>
                             </li>
-                         </ul>
-                           <li><a>Two</a></li>
-                           <li><a>Three</a></li>
+                          </ul>
+                          <li><a class="unity-engine-namespace2">UnityEngine.Animation</a></li>
+                           <ul class="menu-list unity-engine-sublayer2 hidden">
+                            <li>
+                               <ul>
+                                  <li><a>Classes</a></li>
+                                  <li><a>Interfaces</a></li>
+                                  <li><a>Enumerations-(Enum)</a></li>
+                                  <li><a>Attributes</a></li>
+                               </ul>
+                            </li>
+                          </ul>
+                          <li><a class="unity-engine-nspshare1">UnityEngine.Assertions</a></li>
+                           <ul class="menu-list unity-engine-nspshare2 hidden">
+                            <li>
+                               <ul>
+                                <li><a class="unity-engine-nspshare1 long-text">UnityEngine.Assertions.Comparers</a></li>
+                                <ul class="menu-list unity-engine-nspshare2 hidden">
+                                 <li>
+                                    <ul>
+                                       <li><a>Classes</a></li>
+                                    </ul>
+                                 </li>
+                               </ul>
+                               <li><a class="unity-engine-nspshare1 long-text">UnityEngine.Assertions.Must</a></li>
+                                <ul class="menu-list unity-engine-nspshare2 hidden">
+                                  <li>
+                                    <ul>
+                                      <li><a>Classes</a></li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                                  <li><a>Classes</a></li>
+                               </ul>
+                            </li>
+                          </ul>
                         </ul>
                      </li>
                   </ul>
                   <ul class="menu-list unity-engine">
                     <li>
-                       <a class="is-active unity-engine-label2" data-target="engine-submenu2">Unity Editor</a>
-                       <ul class="unity-engine-submenu2 hidden" id="unity-engine-submenu2">
+                       <a class="is-active unity-engine-label2">Unity Editor</a>
+                       <ul class="unity-engine-submenu2 hidden">
                           <li><a>One</a></li>
                           <li><a>Two</a></li>
                           <li><a>Three</a></li>
@@ -64,8 +98,8 @@
                  </ul>
                  <ul class="menu-list unity-engine">
                     <li>
-                       <a class="is-active unity-engine-label3" data-target="engine-submenu3">Unity</a>
-                       <ul class="unity-engine-submenu3 hidden" id="unity-engine-submenu3">
+                       <a class="is-active unity-engine-label3">Unity</a>
+                       <ul class="unity-engine-submenu3 hidden">
                           <li><a>One</a></li>
                           <li><a>Two</a></li>
                           <li><a>Three</a></li>
@@ -74,6 +108,8 @@
                  </ul>
                </aside>
             </div>
+         </div>
+         <div><!--Info Section for Unity API icon-->
          </div>
          <div class="tile is-child px-5"><!--  Middle Section  -->
             <div class="tile is-vertical is-12 px-5">
