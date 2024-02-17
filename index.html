@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
    <head>
+      <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Coding API Help</title>
-      <!-- Using Font Awesome CDN -->
+
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
       <link rel="stylesheet" href="css/style.css" title="no title" charset="utf-8">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -20,25 +22,60 @@
             </p>
          </div>
         </div>
-      <div class="tile is-ancestor">
+      <div class="tile is-ancestor"><!-- Left Section  -->
          <div class="tile is-vertical is-2">
             <div class="tile is-child box">
                <aside class="menu">
-                  <p class="menu-label">Unity API</p>
-                  <ul class="menu-list">
+                <div class="icon-text mx-1 mb-1">
+                  <span><p class="menu-label unity-api">Unity API</p></span>
+                  <span class="icon has-text-info">
+                    <i class="fas fa-info-circle"></i>
+                  </span>
+                </div>
+                  <button class="button is-success is-outlined is-light mb-4 button is-small is-fullwidth ">Main</button>
+                  <ul class="menu-list unity-engine">
                      <li>
-                        <a class="is-active">Unity Engine</a>
-                        <ul>
+                        <a class="is-active unity-engine-label1" data-target="engine-submenu1">Unity Engine</a>
+                        <ul class="unity-engine-submenu1 hidden" id="unity-engine-submenu1">
                            <li><a>One</a></li>
+                           <ul class="menu-list">
+                            <li>
+                               <ul>
+                                  <li><a>One</a></li>
+                                  <li><a>Two</a></li>
+                                  <li><a>Three</a></li>
+                               </ul>
+                            </li>
+                         </ul>
                            <li><a>Two</a></li>
                            <li><a>Three</a></li>
                         </ul>
                      </li>
                   </ul>
+                  <ul class="menu-list unity-engine">
+                    <li>
+                       <a class="is-active unity-engine-label2" data-target="engine-submenu2">Unity Editor</a>
+                       <ul class="unity-engine-submenu2 hidden" id="unity-engine-submenu2">
+                          <li><a>One</a></li>
+                          <li><a>Two</a></li>
+                          <li><a>Three</a></li>
+                       </ul>
+                    </li>
+                 </ul>
+                 <ul class="menu-list unity-engine">
+                    <li>
+                       <a class="is-active unity-engine-label3" data-target="engine-submenu3">Unity</a>
+                       <ul class="unity-engine-submenu3 hidden" id="unity-engine-submenu3">
+                          <li><a>One</a></li>
+                          <li><a>Two</a></li>
+                          <li><a>Three</a></li>
+                       </ul>
+                    </li>
+                 </ul>
                </aside>
             </div>
          </div>
-         <div class="tile is-child px-5">
+         <div class="tile is-child px-5"><!--  Middle Section  -->
             <div class="tile is-vertical is-12 px-5">
                <div class="tile is-child box">
                   <input class="input is-rounded" type="text" placeholder="Search">
@@ -46,37 +83,42 @@
                <div>
                   <span class="tile is-3">
                      <div class="mx-1 pr-1 p-1">
+                        <a class="tile is-child box ">
+                           <span class="gif-titles">Animation</span>
+                           <figure class="image is-128x128 pt-3">
+                              <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
+                           </figure>
+                        </a>
+                     </div>
+                     <div class="mx-1 pr-1 p-1">
                         <a class="tile is-child box">
-                           <figure class="image is-128x128">
-                              <p><img class="is-rounded" class="mb-4" src="https://bulma.io/images/placeholders/128x128.png"></p>
+                           <span class="gif-titles">Assets</span>
+                           <figure class="image is-128x128 pt-3">
+                              <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
                            </figure>
                         </a>
                      </div>
                      <div class="mx-1 p-1">
                         <a class="tile is-child box">
-                           <figure class="image is-128x128">
-                              <p><img class="is-rounded" class="mb-4" src="https://bulma.io/images/placeholders/128x128.png"></p>
+                           <span class="gif-titles">Assets</span>
+                           <figure class="image is-128x128 pt-3">
+                              <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
                            </figure>
                         </a>
                      </div>
                      <div class="mx-1 p-1">
                         <a class="tile is-child box">
-                           <figure class="image is-128x128">
-                              <p><img class="is-rounded" class="mb-4" src="https://bulma.io/images/placeholders/128x128.png"></p>
+                           <span class="gif-titles">Assets</span>
+                           <figure class="image is-128x128 pt-3">
+                              <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
                            </figure>
                         </a>
                      </div>
                      <div class="mx-1 p-1">
                         <a class="tile is-child box">
-                           <figure class="image is-128x128">
-                              <p><img class="is-rounded" class="mb-4" src="https://bulma.io/images/placeholders/128x128.png"></p>
-                           </figure>
-                        </a>
-                     </div>
-                     <div class="mx-1 p-1">
-                        <a class="tile is-child box">
-                           <figure class="image is-128x128">
-                              <p><img class="is-rounded" class="mb-4" src="https://bulma.io/images/placeholders/128x128.png"></p>
+                            <span class="gif-titles">Assets</span>
+                           <figure class="image is-128x128 pt-3">
+                              <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
                            </figure>
                         </a>
                      </div>
@@ -86,44 +128,49 @@
                   <span class="tile is-3">
                   <div class="mx-1 p-1">
                      <a class="tile is-child box">
-                        <figure class="image is-128x128">
-                           <p><img class="is-rounded" class="mb-4" src="https://bulma.io/images/placeholders/128x128.png"></p>
+                        <span class="gif-titles">Assets</span>
+                        <figure class="image is-128x128 pt-3">
+                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
                         </figure>
                      </a>
                   </div>
                   <div class="mx-1 p-1">
                      <a class="tile is-child box">
-                        <figure class="image is-128x128">
-                           <p><img class="is-rounded" class="mb-4" src="https://bulma.io/images/placeholders/128x128.png"></p>
+                        <span class="gif-titles">Assets</span>
+                        <figure class="image is-128x128 pt-3">
+                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
                         </figure>
                      </a>
                   </div>
                   <div class="mx-1 p-1">
                      <a class="tile is-child box">
-                        <figure class="image is-128x128">
-                           <p><img class="is-rounded" class="mb-4" src="https://bulma.io/images/placeholders/128x128.png"></p>
+                        <span class="gif-titles">Assets</span>
+                        <figure class="image is-128x128 pt-3">
+                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
                         </figure>
                      </a>
                   </div>
                   <div class="mx-1 p-1">
                      <a class="tile is-child box">
-                        <figure class="image is-128x128">
-                           <p><img class="is-rounded" class="mb-4" src="https://bulma.io/images/placeholders/128x128.png"></p>
+                        <span class="gif-titles">Assets</span>
+                        <figure class="image is-128x128 pt-3">
+                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
                         </figure>
                      </a>
                   </div>
                   <div class="mx-1 p-1">
                      <a class="tile is-child box">
-                        <figure class="image is-128x128">
-                           <p><img class="is-rounded" class="mb-4" src="https://bulma.io/images/placeholders/128x128.png"></p>
+                        <span class="gif-titles">Assets</span>
+                        <figure class="image is-128x128 pt-3">
+                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
                         </figure>
                      </a>
                   </div>
                </div>
             </div>
          </div>
-         <div class="tile is-child">
-            <div class="tile is-9 is-vertical">
+         <div class="tile is-child"><!--  Right Section  -->
+            <div class="tile is-11 is-vertical">
                <div class="tile is-child box">
                   <article class="panel is-success">
                      <p class="panel-heading">
@@ -131,10 +178,16 @@
                      </p>
                      <p class="panel-tabs">
                         <a class="is-active">All</a>
-                        <a>Public</a>
-                        <a>Private</a>
-                        <a>Sources</a>
-                        <a>Forks</a>
+                        <a>Animation</a>
+                        <a>Asset</a>
+                        <a>Physics</a>
+                        <a>Location</a>
+                     </p>
+                     <p class="panel-tabs">
+                        <a>Particle Sys</a>
+                        <a>Ui System</a>
+                        <a>Audio</a>
+                        <a>Networking</a>
                      </p>
                      <div class="panel-block">
                         <p class="control has-icons-left">
@@ -148,7 +201,7 @@
                      <span class="panel-icon">
                      <i class="fas fa-check-square" aria-hidden="true"></i>
                      </span>
-                     bulma
+                     Test
                      </a>
                      <a class="panel-block">
                      <span class="panel-icon">
@@ -183,7 +236,7 @@
                   </header>
                   <div class="card-image">
                     <figure class="image is-16by9">
-                        <iframe class="has-ratio"  width="640" height="360" src="https://www.youtube.com/embed/YE7VzlLtp-4" frameborder="0" allowfullscreen></iframe>
+                        <iframe class="has-ratio"  width="640" height="360" src="https://www.youtube.com/embed/JYkFm1Sc3v8" frameborder="0" allowfullscreen></iframe>
                      </figure>
                   </div>
                   <div class="card-content">
