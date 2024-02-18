@@ -31,7 +31,7 @@
                 <div class="icon-text mx-1 mb-1">
                   <span><p class="menu-label unity-api">Unity API</p></span>
                   <span class="icon has-text-info">
-                    <i class="fas fa-info-circle"></i>
+                    <i class="fas fa-info-circle info-structure"></i>
                   </span>
                 </div>
                   <button class="button is-success is-outlined is-light mb-4 button is-small is-fullwidth ">Main</button>
@@ -109,104 +109,166 @@
                </aside>
             </div>
          </div>
-         <div><!--Info Section for Unity API icon-->
+         <div class="hidden info-section"><!--Info Section for Unity API icon-->
+            <article class="message is-success message is-small">
+                <div class="message-body">
+                    *Structure<br>
+                    <br>
+                    <b>Unity API (main directory)<br></b> 
+                    |<br> 
+                    -Unity Engine <b>(subdirectory)</b><br> 
+                    |<br>
+                    |__UnityEngine.Animation (Module)<br> 
+                    | (namespace) w/ Classes,Enum,Attrib<br> 
+                    |<br> 
+                    |__UnityEngine.Assertions (Module)<br> 
+                    | (namespace) w/ Classes<br> 
+                    |<br> 
+                    -Unity Editor <b>(subdirectory)</b><br> 
+                    |<br> 
+                    |__UnityEditor.Advertisments<br> 
+                    | (namespace) w/ Classes<br> 
+                    |<br> 
+                    -Unity <b>(subdirectory)</b><br> 
+                    |<br> 
+                    |__Unity.Loading(Module)<br>
+                    | (namespace) w/ Classes,Enum<br>  
+                </div>
+            </article>
          </div>
-         <div class="tile is-child px-5"><!--  Middle Section  -->
-            <div class="tile is-vertical is-12 px-5">
+         <div class="tile is-child pl-2 pr-5"><!--  Middle Section  -->
+            <div class="tile is-vertical is-9 px-5">
                <div class="tile is-child box">
-                  <input class="input is-rounded" type="text" placeholder="Search">
+                  <input class="input is-rounded" type="text" placeholder="Search" id="searchInput">
                </div>
-               <div>
-                  <span class="tile is-3">
-                     <div class="mx-1 pr-1 p-1">
-                        <a class="tile is-child box ">
-                           <span class="gif-titles">Animation</span>
-                           <figure class="image is-128x128 pt-3">
-                              <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                           </figure>
-                        </a>
+               <div class="card">
+                <header class="card-header">
+                   <p class="card-header-title">
+                      *Template
+                   </p>
+                   <button class="card-header-icon" aria-label="more options">
+                   <span class="icon">
+                   <i class="fas fa-angle-down angle-button" aria-hidden="true"></i>
+                   </span>
+                   </button>
+                </header>
+                <div class="image-card-content hidden">
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-content">
+                        <p class="title is-4">John Smith</p>
+                        <p class="subtitle is-6">@johnsmith</p>
+                      </div>
+                    </div>
+                    <div class="content">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                      <a href="#">#css</a> <a href="#">#responsive</a>
+                      <br>
+                      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                    </div>
+                  </div>
+                </div>
+             </div>
+               <div class="mt-5 mb-4" id="tileContainer">
+                  <div>
+                        <div class="mx-1 pr-1 p-1 pr-3 hidden-middle-tile" data-search-term="add asset">
+                           <a class="tile is-child box ">
+                              <span class="gif-titles">Add Asset<br>in Unity</span>
+                              <figure class="image is-128x128 pt-3">
+                                 <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
+                              </figure>
+                           </a>
+                        </div>
                      </div>
-                     <div class="mx-1 pr-1 p-1">
+                     <div class="mx-1 pr-1 p-1 pr-3 hidden-middle-tile" data-search-term="add import asset">
                         <a class="tile is-child box">
-                           <span class="gif-titles">Assets</span>
+                           <span class="gif-titles">Add Asset<br>Import</span>
                            <figure class="image is-128x128 pt-3">
                               <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
                            </figure>
                         </a>
                      </div>
-                     <div class="mx-1 p-1">
+                     <div class="mx-1 p-1 pr-3 hidden-middle-tile" data-search-term="add asset spawn">
                         <a class="tile is-child box">
-                           <span class="gif-titles">Assets</span>
+                           <span class="gif-titles">Add Asset<br>Spawning</span>
                            <figure class="image is-128x128 pt-3">
                               <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
                            </figure>
                         </a>
                      </div>
-                     <div class="mx-1 p-1">
+                     <div class="mx-1 p-1 pr-3 hidden-middle-tile" data-search-term="asset destroy">
                         <a class="tile is-child box">
-                           <span class="gif-titles">Assets</span>
+                           <span class="gif-titles">Destroy<br>Asset</span>
                            <figure class="image is-128x128 pt-3">
                               <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
                            </figure>
                         </a>
                      </div>
-                     <div class="mx-1 p-1">
+                     <div class="mx-1 p-1 pr-3 hidden-middle-tile" data-search-term="animation">
                         <a class="tile is-child box">
-                            <span class="gif-titles">Assets</span>
+                            <span class="gif-titles">Animation3</span>
                            <figure class="image is-128x128 pt-3">
                               <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
                            </figure>
                         </a>
                      </div>
-                  </span>
-               </div>
-               <div class="my-4 ">
-                  <span class="tile is-3">
-                  <div class="mx-1 p-1">
-                     <a class="tile is-child box">
-                        <span class="gif-titles">Assets</span>
-                        <figure class="image is-128x128 pt-3">
-                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                        </figure>
-                     </a>
-                  </div>
-                  <div class="mx-1 p-1">
-                     <a class="tile is-child box">
-                        <span class="gif-titles">Assets</span>
-                        <figure class="image is-128x128 pt-3">
-                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                        </figure>
-                     </a>
-                  </div>
-                  <div class="mx-1 p-1">
-                     <a class="tile is-child box">
-                        <span class="gif-titles">Assets</span>
-                        <figure class="image is-128x128 pt-3">
-                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                        </figure>
-                     </a>
-                  </div>
-                  <div class="mx-1 p-1">
-                     <a class="tile is-child box">
-                        <span class="gif-titles">Assets</span>
-                        <figure class="image is-128x128 pt-3">
-                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                        </figure>
-                     </a>
-                  </div>
-                  <div class="mx-1 p-1">
-                     <a class="tile is-child box">
-                        <span class="gif-titles">Assets</span>
-                        <figure class="image is-128x128 pt-3">
-                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                        </figure>
-                     </a>
-                  </div>
+                     <div class="mx-1 p-1 pr-3 hidden-middle-tile" data-search-term="assets">
+                        <a class="tile is-child box">
+                           <span class="gif-titles">Assets3</span>
+                           <figure class="image is-128x128 pt-3">
+                              <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
+                           </figure>
+                        </a>
+                     </div>
+                     <div class="mx-1 p-1 pr-3 hidden-middle-tile" data-search-term="animation">
+                        <a class="tile is-child box">
+                           <span class="gif-titles">Animation4</span>
+                           <figure class="image is-128x128 pt-3">
+                              <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
+                           </figure>
+                        </a>
+                     </div>
+                     <div class="mx-1 p-1 pr-3 hidden-middle-tile" data-search-term="assets">
+                        <a class="tile is-child box">
+                           <span class="gif-titles">Assets4</span>
+                           <figure class="image is-128x128 pt-3">
+                              <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
+                           </figure>
+                        </a>
+                     </div>
+                     <div class="mx-1 p-1  pr-3 hidden-middle-tile" data-search-term="animation 5">
+                        <a class="tile is-child box">
+                           <span class="gif-titles">Animation5</span>
+                           <figure class="image is-128x128 pt-3">
+                              <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
+                           </figure>
+                        </a>
+                     </div>
+                     <div class="mx-1 p-1 pr-3 hidden-middle-tile" data-search-term="assets 5">
+                        <a class="tile is-child box">
+                           <span class="gif-titles">Assets5</span>
+                           <figure class="image is-128x128 pt-3">
+                              <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
+                           </figure>
+                        </a>
+                     </div>
                </div>
             </div>
+            <div class="navigation-bar pt-5 ">
+            <nav class="breadcrumb aria-label="breadcrumbs"><!--   navigation to other pages   -->
+                <ul>
+                <li class="is-active"><a href="#" aria-current="page">Unity API</a></li>
+                <li><a href="#" target="_parent">Git</a></li>
+                <li><a href="https://htmlreference.io/" target="_parent">Html</a></li>
+                <li><a href="https://cssreference.io/" target="_parent">CSS</a></li>
+                <li><a href="#" target="_parent">JavaScript</a></li>
+                <li><a href="#" target="_parent">Python</a></li>
+                </ul>
+            </div>
          </div>
-         <div class="tile is-child"><!--  Right Section  -->
-            <div class="tile is-11 is-vertical">
+         <div class="tile is-ancestor fixed-section"><!--  Right Section  -->
+            <div class="tile is-5 is-vertical">
                <div class="tile is-child box">
                   <article class="panel is-success">
                      <p class="panel-heading">
@@ -262,32 +324,34 @@
                <div class="card">
                   <header class="card-header">
                      <p class="card-header-title">
-                        Card header
+                        *Notes
                      </p>
                      <button class="card-header-icon" aria-label="more options">
                      <span class="icon">
-                     <i class="fas fa-angle-down" aria-hidden="true"></i>
+                     <i class="fas fa-angle-down angle-button" aria-hidden="true"></i>
                      </span>
                      </button>
                   </header>
-                  <div class="card-image">
-                    <figure class="image is-16by9">
-                        <iframe class="has-ratio"  width="640" height="360" src="https://www.youtube.com/embed/JYkFm1Sc3v8" frameborder="0" allowfullscreen></iframe>
-                     </figure>
-                  </div>
-                  <div class="card-content">
-                    <div class="media">
-                      <div class="media-content">
-                        <p class="title is-4">John Smith</p>
-                        <p class="subtitle is-6">@johnsmith</p>
-                      </div>
+                  <div class="image-card-content hidden">
+                    <div class="card-image">
+                      <figure class="image is-16by9">
+                          <iframe class="has-ratio"  width="640" height="360" src="https://www.youtube.com/embed/JYkFm1Sc3v8" frameborder="0" allowfullscreen></iframe>
+                       </figure>
                     </div>
-                    <div class="content">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                      <a href="#">#css</a> <a href="#">#responsive</a>
-                      <br>
-                      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                    <div class="card-content">
+                      <div class="media">
+                        <div class="media-content">
+                          <p class="title is-4">John Smith</p>
+                          <p class="subtitle is-6">@johnsmith</p>
+                        </div>
+                      </div>
+                      <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                        <a href="#">#css</a> <a href="#">#responsive</a>
+                        <br>
+                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                      </div>
                     </div>
                   </div>
                </div>

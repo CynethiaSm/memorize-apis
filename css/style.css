@@ -1,10 +1,14 @@
 html,body {
     background-color: rgba(50, 115, 220, 0.3);
+    height: 1100px;
 }
 
-/*To toggle left side panel*/
-.hidden {
-    display: none;
+/*Two buttons Add and Restart*/
+.top-button {
+    display: block;
+    position: absolute;
+    left: 1230px;
+    bottom:0px;
 }
 
 /*Titles above each gif*/
@@ -17,13 +21,59 @@ html,body {
     text-shadow: 2px 4px 10px rgb(240, 207, 164);
 }
 
-.top-button {
+/*For the info icon on left panel*/
+.info-section {
     display: block;
     position: absolute;
-    left: 1170px;
-    bottom:0x;
+    left: 94px;
+    top: 210px;
 }
 
 .long-text {
     font-size: 11px;
+}
+
+/*bottom navigation bar*/
+.navigation-bar {
+    display: block;
+    position: relative;
+    left: 280px;
+    top:100px;
+}
+
+/* Right side panel*/
+.fixed-section {
+    position: absolute;
+    top: 192px; /* Adjust as needed */
+    left: 1390px; /* Adjust as needed */
+    width: 50%; /* Optionally, you can set a specific width */
+    /* Add any other styles you need */
+}
+
+.hidden-placeholder {
+    visibility: hidden;
+}
+
+/*For tiles in the middle*/
+#tileContainer {
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+
+.hidden-middle-tile {
+    display: none;
+}
+
+.hidden-middle-tile.is-visible {
+    display: block;
+}
+
+/*To toggle left side panel*/
+.hidden {
+    display: none;
+    visibility: hidden;
 }
