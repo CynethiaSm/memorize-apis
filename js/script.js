@@ -31,10 +31,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /* 
 ------------------------------------------------------------------------------------------------------------------------
-2. Add to and Restart progress bar
+2. Toggle Information Section near Unity API
 ------------------------------------------------------------------------------------------------------------------------
 */
+document.addEventListener('DOMContentLoaded' , function () {
+    const informationStruct = document.querySelector('.info-structure');
+    const informationSection = document.querySelector('.info-section');
 
+    informationStruct.addEventListener('mouseover', function () {
+        informationSection.classList.toggle('hidden');
+    });
+
+    informationStruct.addEventListener('mouseout', function () {
+        informationSection.classList.toggle('hidden');
+    });
+});
 
 /* 
 ------------------------------------------------------------------------------------------------------------------------
@@ -108,6 +119,45 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /* 
 ------------------------------------------------------------------------------------------------------------------------
-5. Show and Hide Left Side Panel - Layer 2 Class,Enum
+5. Show and Hide Right Panel
 ------------------------------------------------------------------------------------------------------------------------
 */
+document.addEventListener('DOMContentLoaded', function () {
+    const unityEngineCardHeader = document.querySelector('.angle-button');
+    const unityEngineCardImage = document.querySelector('.image-card-content');
+
+    unityEngineCardHeader.addEventListener('click', function () {
+        unityEngineCardImage.classList.toggle('hidden');
+    });
+});
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+6. Use the Search bar to find tiles
+------------------------------------------------------------------------------------------------------------------------
+*/
+document.addEventListener('DOMContentLoaded', function () {
+    const searchInput = document.getElementById('searchInput');
+    const tiles = document.querySelectorAll('[data-search-term]');
+
+     // Remove the 'hidden' class from all tiles initially
+     tiles.forEach(function(tile) {
+        tile.classList.remove('hidden-middle-tile');
+    });
+
+    searchInput.addEventListener('input', function () {
+        const inputValue = searchInput.value.toLowerCase();
+
+        tiles.forEach(function(tile) {
+            const searchTerm = tile.getAttribute('data-search-term').toLowerCase();
+            const match = searchTerm.includes(inputValue);
+
+            // Toggle visibility based on whether the search term matches the input value
+            tile.classList.toggle('hidden-middle-tile', !match);
+        });
+
+        arrangeTiles();
+    });
+});
+
+
