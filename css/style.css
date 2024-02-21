@@ -1,25 +1,20 @@
 html,body {
     background-color: rgba(50, 115, 220, 0.3);
-    height: 1100px;
+    height: 2100px;
 }
+
+
+/*---Top Section---*/
 
 /*Two buttons Add and Restart*/
 .top-button {
-    display: block;
-    position: absolute;
-    left: 1230px;
-    bottom:0px;
+  position: absolute;
+  left: 75%;
+  transform: translateX(-50%);
 }
 
-/*Titles above each gif*/
-.gif-titles {
-    display: block;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 700;
-    font-variant: small-caps;
-    text-shadow: 2px 4px 10px rgb(240, 207, 164);
-}
+
+/*---Left Section---*/
 
 /*For the info icon on left panel*/
 .info-section {
@@ -33,7 +28,40 @@ html,body {
     font-size: 11px;
 }
 
-/*bottom navigation bar*/
+
+/*---Middle Section---*/
+
+.template-bar {
+    cursor: pointer;
+}
+
+.tile-middle {
+    display: grid;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Titles above each gif */
+.gif-titles {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    font-variant: small-caps;
+    text-shadow: 2px 4px 10px rgb(240, 207, 164);
+}
+
+/* For tiles in the middle */
+#tileContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(20% - 1rem), 1fr));
+    grid-auto-rows: auto;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+
+
+/* bottom navigation bar */
 .navigation-bar {
     display: block;
     position: relative;
@@ -41,39 +69,156 @@ html,body {
     top:100px;
 }
 
-/* Right side panel*/
-.fixed-section {
-    position: absolute;
-    top: 192px; /* Adjust as needed */
-    left: 1390px; /* Adjust as needed */
-    width: 50%; /* Optionally, you can set a specific width */
-    /* Add any other styles you need */
+
+/*---Right Section---*/
+
+.right-panel-common {
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
-.hidden-placeholder {
-    visibility: hidden;
+.right-panel-reminder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
-/*For tiles in the middle*/
-#tileContainer {
-    display: flex;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 1rem;
+
+
+.editor {
+  position: relative;
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+  border: solid 10px rgba(0,0,0,.35);
+  border-radius: 4px;
+  overflow: hidden;
 }
 
+.editor-pane {
+  float: left;
+  width: 50%;
+}
+
+.editor-pane:last-child {
+  border-right: solid 1px rgba(255,255,255,.03);
+  border-bottom: solid 1px rgba(255,255,255,.03);
+}
+
+.editor * {
+  font-family: menlo,monospace;
+  font-size: 14px;
+  line-height: 150%;
+  padding: 0;
+  margin: 0;
+}
+
+.editor .input-header {
+  text-align: left;
+  padding: 10px 15px;
+  background: rgba(0,0,0,.15);
+  border-top: solid 1px rgba(255,255,255,.05);
+  border-bottom: solid 1px rgba(255,255,255,.05);
+  border-radius: 2px 2px 0 0;
+  color: rgba(255,255,255,.6);
+}
+
+.markup {
+  line-height: 150%;
+  font-family: menlo;
+  z-index: 1;
+}
+
+.editor .file-window {
+  padding: 10px 10px 10px 46px;
+  position: relative;
+  min-height: 532px;
+}
+
+.editor .css-view {
+  background: #efefef;
+  color: #AAA;
+
+}
+
+.editor .file-name {
+  float: right;
+  opacity: .5;
+}
+
+.editor .line-numbers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: menlo, monospace;
+  padding: 10px 10px;
+  height: 100%;
+  line-height: 150%;
+  text-align: right;
+}
+
+.css-view .line-numbers {
+  color: #8a8989;
+  background: #DDD;
+}
+
+.html-view .line-numbers {
+  color: #635d5d;
+  border-right: solid 1px #333;
+}
+
+.html-view .file-window {
+  background: rgba(0,0,0,.3);
+}
+
+.editor input {
+  font-family: menlo, monospace;
+  color: #333;
+  border: none;
+  width: calc(100% - 44px);
+  background: none  ;
+}
+
+.editor input.input-strobe {
+  background: rgba(62,203,255,.3);
+  -webkit-animation: input .9s infinite;
+  -moz-animation: input .5s infinite;
+
+}
+
+@-webkit-keyframes input {
+  50% { background:none ; }
+}
+
+@-moz-keyframes input {
+  50% { background:none ; }
+}
+
+.editor input:focus {
+  outline: none;
+  border-color: #555;
+}
+
+.result {
+  padding: 10px 0;
+  color: #BBB;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+/*---hidden---*/
 
 .hidden-middle-tile {
-    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.hidden-middle-tile.is-visible {
-    display: block;
+.hidden-right-panel {
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-/*To toggle left side panel*/
 .hidden {
     display: none;
-    visibility: hidden;
 }

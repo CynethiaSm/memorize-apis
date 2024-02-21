@@ -2,11 +2,10 @@
 <html lang="en">
    <head>
       <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
-
+      <script src="js/sectioninformation.js" type="text/javascript" charset="utf-8"></script>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Coding API Help</title>
-
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
       <link rel="stylesheet" href="css/style.css" title="no title" charset="utf-8">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -23,302 +22,423 @@
                <progress class="progress is-primary" id="progress-bar" value="0" max="100">15%</progress>
             </p>
          </div>
-        </div>
-      <div class="tile is-ancestor"><!-- Left Section  -->
+      </div>
+      <div class="tile is-ancestor">
+         <!-- Left Section  -->
          <div class="tile is-vertical is-2">
             <div class="tile is-child box">
                <aside class="menu">
-                <div class="icon-text mx-1 mb-1">
-                  <span><p class="menu-label unity-api">Unity API</p></span>
-                  <span class="icon has-text-info">
-                    <i class="fas fa-info-circle info-structure"></i>
-                  </span>
-                </div>
-                  <button class="button is-success is-outlined is-light mb-4 button is-small is-fullwidth ">Main</button>
+                  <div class="icon-text mx-1 mb-1">
+                     <span>
+                        <p class="menu-label unity-api">Unity API</p>
+                     </span>
+                     <span class="icon has-text-info">
+                     <i class="fas fa-info-circle info-structure"></i>
+                     </span>
+                  </div>
+                  <button class="button is-success is-outlined is-light mb-4 button is-small is-fullwidth main-button">Main</button>
                   <ul class="menu-list unity-engine">
                      <li>
-                        <a class="is-active unity-engine-label1">Unity Engine</a>
-                        <ul class="unity-engine-submenu1 hidden">
-                          <li><a class="unity-engine-namespace1">UnityEngine.AI</a></li>
-                           <ul class="menu-list unity-engine-sublayer1 hidden">
-                            <li>
-                               <ul>
-                                  <li><a>Classes</a></li>
-                                  <li><a>Enumerations-(Enum)</a></li>
-                               </ul>
-                            </li>
-                          </ul>
-                          <li><a class="unity-engine-namespace2">UnityEngine.Animation</a></li>
-                           <ul class="menu-list unity-engine-sublayer2 hidden">
-                            <li>
-                               <ul>
-                                  <li><a>Classes</a></li>
-                                  <li><a>Interfaces</a></li>
-                                  <li><a>Enumerations-(Enum)</a></li>
-                                  <li><a>Attributes</a></li>
-                               </ul>
-                            </li>
-                          </ul>
-                          <li><a class="unity-engine-nspshare1">UnityEngine.Assertions</a></li>
-                           <ul class="menu-list unity-engine-nspshare2 hidden">
-                            <li>
-                               <ul>
-                                <li><a class="unity-engine-nspshare1 long-text">UnityEngine.Assertions.Comparers</a></li>
-                                <ul class="menu-list unity-engine-nspshare2 hidden">
-                                 <li>
-                                    <ul>
-                                       <li><a>Classes</a></li>
-                                    </ul>
-                                 </li>
-                               </ul>
-                               <li><a class="unity-engine-nspshare1 long-text">UnityEngine.Assertions.Must</a></li>
-                                <ul class="menu-list unity-engine-nspshare2 hidden">
-                                  <li>
-                                    <ul>
-                                      <li><a>Classes</a></li>
-                                    </ul>
-                                  </li>
-                                </ul>
-                                  <li><a>Classes</a></li>
-                               </ul>
-                            </li>
-                          </ul>
+                        <a class="is-active unity-engine-label">Unity Engine</a>
+                        <ul class="unity-engine-submenu hidden">
+                           <li><a class="unity-namespace-ai">UnityEngine.AI</a></li>
+                           <ul class="menu-list unity-sublayer-ai hidden">
+                              <li>
+                                 <ul>
+                                    <li><a>Classes</a></li>
+                                    <li><a>Enumerations-(Enum)</a></li>
+                                 </ul>
+                              </li>
+                           </ul>
+                           <li><a class="unity-namespace-animation">UnityEngine.Animation</a></li>
+                           <ul class="menu-list unity-sublayer-animation hidden">
+                              <li>
+                                 <ul>
+                                    <li><a>Classes</a></li>
+                                    <li><a>Interfaces</a></li>
+                                    <li><a>Enumerations-(Enum)</a></li>
+                                    <li><a>Attributes</a></li>
+                                 </ul>
+                              </li>
+                           </ul>
+                           <li><a class="unity-namespace-assertion">UnityEngine.Assertions</a></li>
+                           <ul class="menu-list unity-sublayer-assertion hidden">
+                              <li>
+                                 <ul>
+                                    <li><a class="long-text">UnityEngine.Assertions.Comparers</a></li>
+                                    <li><a class="long-text">UnityEngine.Assertions.Must</a></li>
+                                    <li><a>Classes</a></li>
+                                 </ul>
+                              </li>
+                           </ul>
                         </ul>
                      </li>
                   </ul>
                   <ul class="menu-list unity-engine">
-                    <li>
-                       <a class="is-active unity-engine-label2">Unity Editor</a>
-                       <ul class="unity-engine-submenu2 hidden">
-                          <li><a>One</a></li>
-                          <li><a>Two</a></li>
-                          <li><a>Three</a></li>
-                       </ul>
-                    </li>
-                 </ul>
-                 <ul class="menu-list unity-engine">
-                    <li>
-                       <a class="is-active unity-engine-label3">Unity</a>
-                       <ul class="unity-engine-submenu3 hidden">
-                          <li><a>One</a></li>
-                          <li><a>Two</a></li>
-                          <li><a>Three</a></li>
-                       </ul>
-                    </li>
-                 </ul>
+                     <li>
+                        <a class="is-active unity-editor-label">Unity Editor</a>
+                        <ul class="unity-editor-submenu hidden">
+                           <li><a>One</a></li>
+                           <li><a>Two</a></li>
+                           <li><a>Three</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+                  <ul class="menu-list unity-engine">
+                     <li>
+                        <a class="is-active unity-label">Unity</a>
+                        <ul class="unity-submenu hidden">
+                           <li><a>One</a></li>
+                           <li><a>Two</a></li>
+                           <li><a>Three</a></li>
+                        </ul>
+                     </li>
+                  </ul>
                </aside>
             </div>
          </div>
-         <div class="hidden info-section"><!--Info Section for Unity API icon-->
+         <div class="hidden info-section">
+            <!--Info Section for Unity API icon-->
             <article class="message is-success message is-small">
-                <div class="message-body">
-                    *Structure<br>
-                    <br>
-                    <b>Unity API (main directory)<br></b> 
-                    |<br> 
-                    -Unity Engine <b>(subdirectory)</b><br> 
-                    |<br>
-                    |__UnityEngine.Animation (Module)<br> 
-                    | (namespace) w/ Classes,Enum,Attrib<br> 
-                    |<br> 
-                    |__UnityEngine.Assertions (Module)<br> 
-                    | (namespace) w/ Classes<br> 
-                    |<br> 
-                    -Unity Editor <b>(subdirectory)</b><br> 
-                    |<br> 
-                    |__UnityEditor.Advertisments<br> 
-                    | (namespace) w/ Classes<br> 
-                    |<br> 
-                    -Unity <b>(subdirectory)</b><br> 
-                    |<br> 
-                    |__Unity.Loading(Module)<br>
-                    | (namespace) w/ Classes,Enum<br>  
-                </div>
+               <div class="message-body">
+                  *Structure<br>
+                  <br>
+                  <b>Unity API (main directory)<br></b> 
+                  |<br> 
+                  -Unity Engine <b>(subdirectory)</b><br> 
+                  |<br>
+                  |__UnityEngine.Animation (Module)<br> 
+                  | (namespace) w/ Classes,Enum,Attrib<br> 
+                  |<br> 
+                  |__UnityEngine.Assertions (Module)<br> 
+                  | (namespace) w/ Classes<br> 
+                  |<br> 
+                  -Unity Editor <b>(subdirectory)</b><br> 
+                  |<br> 
+                  |__UnityEditor.Advertisments<br> 
+                  | (namespace) w/ Classes<br> 
+                  |<br> 
+                  -Unity <b>(subdirectory)</b><br> 
+                  |<br> 
+                  |__Unity.Loading(Module)<br>
+                  | (namespace) w/ Classes,Enum<br>  
+               </div>
             </article>
          </div>
-         <div class="tile is-child pl-2 pr-5"><!--  Middle Section  -->
-            <div class="tile is-vertical is-9 px-5">
+         <!--  Middle Section  -->
+         <div class="tile is-child tile is-vertical is-7 pl-2 pr-4">
+            <div class=" px-5">
                <div class="tile is-child box">
-                  <input class="input is-rounded" type="text" placeholder="Search" id="searchInput">
+                  <!--  Search  -->
+                  <input class="input is-rounded" type="text" placeholder="Search" id="searchInput"><!--  Search  -->
                </div>
-               <div class="card">
-                <header class="card-header">
-                   <p class="card-header-title">
-                      *Template
-                   </p>
-                   <button class="card-header-icon" aria-label="more options">
-                   <span class="icon">
-                   <i class="fas fa-angle-down angle-button" aria-hidden="true"></i>
-                   </span>
-                   </button>
-                </header>
-                <div class="image-card-content hidden">
-                  <div class="card-content">
-                    <div class="media">
-                      <div class="media-content">
-                        <p class="title is-4">John Smith</p>
-                        <p class="subtitle is-6">@johnsmith</p>
-                      </div>
-                    </div>
-                    <div class="content">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                      <a href="#">#css</a> <a href="#">#responsive</a>
-                      <br>
-                      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                    </div>
-                  </div>
-                </div>
-             </div>
-               <div class="mt-5 mb-4" id="tileContainer">
-                  <div>
-                        <div class="mx-1 pr-1 p-1 pr-3 hidden-middle-tile" data-search-term="add asset">
-                           <a class="tile is-child box ">
-                              <span class="gif-titles">Add Asset<br>in Unity</span>
-                              <figure class="image is-128x128 pt-3">
-                                 <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                              </figure>
-                           </a>
+               <div class="card my-5">
+                  <!--  Template  -->
+                  <header class="card-header template-bar">
+                     <p class="card-header-title">
+                        *Template
+                     </p>
+                     <button class="card-header-icon" aria-label="more options">
+                     <span class="icon">
+                     <i class="fas fa-angle-down" aria-hidden="true"></i>
+                     </span>
+                     </button>
+                  </header>
+                  <div class="card-content-template hidden">
+                     <div class="card-content">
+                        <div class="media">
+                           <div class="media-content">
+                              <p class="title is-4">Unity Script (.cs) Template</p>
+                           </div>
+                        </div>
+                        <div class="content">
+                           <div class="editor">
+                              <div class="editor-pane">
+                                 <div class="input-header">
+                                    <div class="file-name">Unititled.cs</div>
+                                    C# Unity
+                                 </div>
+                                 <div class="file-window css-view">
+                                    <div class="line-numbers">
+                                       1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24
+                                    </div>
+                                    <input class="input-strobe" type="text" placeholder="Practice c#"/><span class="plus">+</span>
+                                    <div></div>
+                                    <div>
+                                       <br/>
+                                       using UnityEngine<br/>
+                                       <br/>
+                                       public class Unititled : MonoBehavior {
+                                       <br/>
+                                       <br/>
+                                       Rigidbody rb;<br/>
+                                       public GameObject cube
+                                       float xInput;<br/>
+                                       floatzInput;<br/>
+                                       <br/>
+                                       void Start()<br/>
+                                       {<br/>
+                                       |    Destroy(gameObject, 3f);<br/>
+                                       |    rb = GetComponent<"Rigidbody">();<br/>
+                                       }<br/>
+                                       <br/>
+                                       void Update()<br/>
+                                       {<br/>
+                                       }<br/>
+                                       <br/>
+                                       private void OnMouseDown()
+                                       {<br/>
+                                       |    Destroy(gameObject);<br/>
+                                       }<br/>
+                                       }<br/>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="editor-pane html-view">
+                                 <div class="input-header">
+                                    <div class="file-name">ClassName.cs</div>
+                                    VS Code
+                                 </div>
+                                 <div class="file-window">
+                                    <div class="line-numbers">1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24</div>
+                                    <div class="markup"></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <br>
+                           <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                         </div>
                      </div>
-                     <div class="mx-1 pr-1 p-1 pr-3 hidden-middle-tile" data-search-term="add import asset">
-                        <a class="tile is-child box">
-                           <span class="gif-titles">Add Asset<br>Import</span>
+                  </div>
+               </div>
+               <div class="mt-5 mb-4" id="tileContainer">
+                  <!--  Tiles Main -->
+                  <div>
+                     <div class="mx-1 pr-1 p-1 pr-3 hidden-middle-tile tile-middle" id="add-asset-unity" data-search-term="add asset">
+                        <a class="tile is-child box ">
+                           <span class="gif-titles">Add Asset<br>in Unity</span>
                            <figure class="image is-128x128 pt-3">
                               <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
                            </figure>
                         </a>
                      </div>
-                     <div class="mx-1 p-1 pr-3 hidden-middle-tile" data-search-term="add asset spawn">
-                        <a class="tile is-child box">
-                           <span class="gif-titles">Add Asset<br>Spawning</span>
-                           <figure class="image is-128x128 pt-3">
-                              <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                           </figure>
-                        </a>
-                     </div>
-                     <div class="mx-1 p-1 pr-3 hidden-middle-tile" data-search-term="asset destroy">
-                        <a class="tile is-child box">
-                           <span class="gif-titles">Destroy<br>Asset</span>
-                           <figure class="image is-128x128 pt-3">
-                              <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                           </figure>
-                        </a>
-                     </div>
-                     <div class="mx-1 p-1 pr-3 hidden-middle-tile" data-search-term="animation">
-                        <a class="tile is-child box">
-                            <span class="gif-titles">Animation3</span>
-                           <figure class="image is-128x128 pt-3">
-                              <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                           </figure>
-                        </a>
-                     </div>
-                     <div class="mx-1 p-1 pr-3 hidden-middle-tile" data-search-term="assets">
-                        <a class="tile is-child box">
-                           <span class="gif-titles">Assets3</span>
-                           <figure class="image is-128x128 pt-3">
-                              <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                           </figure>
-                        </a>
-                     </div>
-                     <div class="mx-1 p-1 pr-3 hidden-middle-tile" data-search-term="animation">
-                        <a class="tile is-child box">
-                           <span class="gif-titles">Animation4</span>
-                           <figure class="image is-128x128 pt-3">
-                              <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                           </figure>
-                        </a>
-                     </div>
-                     <div class="mx-1 p-1 pr-3 hidden-middle-tile" data-search-term="assets">
-                        <a class="tile is-child box">
-                           <span class="gif-titles">Assets4</span>
-                           <figure class="image is-128x128 pt-3">
-                              <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                           </figure>
-                        </a>
-                     </div>
-                     <div class="mx-1 p-1  pr-3 hidden-middle-tile" data-search-term="animation 5">
-                        <a class="tile is-child box">
-                           <span class="gif-titles">Animation5</span>
-                           <figure class="image is-128x128 pt-3">
-                              <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                           </figure>
-                        </a>
-                     </div>
-                     <div class="mx-1 p-1 pr-3 hidden-middle-tile" data-search-term="assets 5">
-                        <a class="tile is-child box">
-                           <span class="gif-titles">Assets5</span>
-                           <figure class="image is-128x128 pt-3">
-                              <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                           </figure>
-                        </a>
-                     </div>
+                  </div>
+                  <div class="mx-1 pr-1 p-1 pr-3 hidden-middle-tile tile-middle" data-search-term="add import asset">
+                     <a class="tile is-child box">
+                        <span class="gif-titles">Add Asset<br>Import</span>
+                        <figure class="image is-128x128 pt-3">
+                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
+                        </figure>
+                     </a>
+                  </div>
+                  <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" data-search-term="add asset spawn">
+                     <a class="tile is-child box">
+                        <span class="gif-titles">Add Asset<br>Spawning</span>
+                        <figure class="image is-128x128 pt-3">
+                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
+                        </figure>
+                     </a>
+                  </div>
+                  <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" data-search-term="asset destroy">
+                     <a class="tile is-child box">
+                        <span class="gif-titles">Destroy<br>Asset</span>
+                        <figure class="image is-128x128 pt-3">
+                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
+                        </figure>
+                     </a>
+                  </div>
+                  <div class="mx-1 p-1 pr-5 hidden-middle-tile tile-middle" data-search-term="animation">
+                     <a class="tile is-child box">
+                        <span class="gif-titles">Animation3<br>Animation</span>
+                        <figure class="image is-128x128 pt-3">
+                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
+                        </figure>
+                     </a>
+                  </div>
+                  <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" data-search-term="assets">
+                     <a class="tile is-child box">
+                        <span class="gif-titles">Assets3</span>
+                        <figure class="image is-128x128 pt-3">
+                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
+                        </figure>
+                     </a>
+                  </div>
+                  <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" data-search-term="animation">
+                     <a class="tile is-child box">
+                        <span class="gif-titles">Animation4</span>
+                        <figure class="image is-128x128 pt-3">
+                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
+                        </figure>
+                     </a>
+                  </div>
+                  <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" data-search-term="assets">
+                     <a class="tile is-child box">
+                        <span class="gif-titles">Assets4</span>
+                        <figure class="image is-128x128 pt-3">
+                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
+                        </figure>
+                     </a>
+                  </div>
+                  <div class="mx-1 p-1  pr-3 hidden-middle-tile tile-middle" data-search-term="animation 5">
+                     <a class="tile is-child box">
+                        <span class="gif-titles">Animation5</span>
+                        <figure class="image is-128x128 pt-3">
+                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
+                        </figure>
+                     </a>
+                  </div>
+                  <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" data-search-term="assets 5">
+                     <a class="tile is-child box">
+                        <span class="gif-titles">Assets5</span>
+                        <figure class="image is-128x128 pt-3">
+                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
+                        </figure>
+                     </a>
+                  </div>
                </div>
             </div>
             <div class="navigation-bar pt-5 ">
-            <nav class="breadcrumb aria-label="breadcrumbs"><!--   navigation to other pages   -->
-                <ul>
-                <li class="is-active"><a href="#" aria-current="page">Unity API</a></li>
-                <li><a href="#" target="_parent">Git</a></li>
-                <li><a href="https://htmlreference.io/" target="_parent">Html</a></li>
-                <li><a href="https://cssreference.io/" target="_parent">CSS</a></li>
-                <li><a href="#" target="_parent">JavaScript</a></li>
-                <li><a href="#" target="_parent">Python</a></li>
-                </ul>
+               <nav class="breadcrumb aria-label="breadcrumbs">
+               <!--   navigation to other pages   -->
+               <ul>
+                  <li class="is-active"><a href="#" aria-current="page">Unity API</a></li>
+                  <li><a href="#" target="_parent">Git</a></li>
+                  <li><a href="https://htmlreference.io/" target="_parent">Html</a></li>
+                  <li><a href="https://cssreference.io/" target="_parent">CSS</a></li>
+                  <li><a href="#" target="_parent">JavaScript</a></li>
+                  <li><a href="#" target="_parent">Python</a></li>
+               </ul>
             </div>
          </div>
-         <div class="tile is-ancestor fixed-section"><!--  Right Section  -->
-            <div class="tile is-5 is-vertical">
-               <div class="tile is-child box">
+         <div class="tile is-child">
+            <!--  Right Section  -->
+            <div class="tile is-11 is-vertical">
+               <div class="tile is-child box right-panel-common hidden-right-panel">
                   <article class="panel is-success">
                      <p class="panel-heading">
-                        Success
+                        Most Commonly Used
                      </p>
                      <p class="panel-tabs">
-                        <a class="is-active">All</a>
-                        <a>Animation</a>
-                        <a>Asset</a>
-                        <a>Physics</a>
-                        <a>Location</a>
+                        <a class="is-active categories switchP1-category">P2</a>
+                        <a class="is-active categories anim-category">Animation</a>
+                        <a class="is-active categories asset-category">Asset</a>
+                        <a class="is-active categories physics-category">Physics</a>
+                        <a class="is-active categories location-category">Location<br>Speed</a>
                      </p>
                      <p class="panel-tabs">
-                        <a>Particle Sys</a>
-                        <a>Ui System</a>
-                        <a>Audio</a>
-                        <a>Networking</a>
+                        <a class="is-active categories partical-category">Particle System</a>
+                        <a class="is-active categories ui-category">Ui System</a>
+                        <a class="is-active categories audio-category">Audio</a>
+                        <a class="is-active categories network-category">Networking</a>
                      </p>
-                     <div class="panel-block">
-                        <p class="control has-icons-left">
-                           <input class="input is-success" type="text" placeholder="Search">
-                           <span class="icon is-left">
-                           <i class="fas fa-search" aria-hidden="true"></i>
+                     <div class="main-common-section list-section">
+                        <div class="panel-block">
+                           <p class="control has-icons-left">
+                              <input class="input is-success" type="text" placeholder="Search">
+                              <span class="icon is-left">
+                              <i class="fas fa-search" aria-hidden="true"></i>
+                              </span>
+                           </p>
+                        </div>
+                        <div class="">
+                           <a class="panel-block is-active levels">
+                           <span class="panel-icon">
+                           <i class="fas fa-book" aria-hidden="true"></i>
                            </span>
-                        </p>
+                           Levels
+                           </a>
+                           <a class="panel-block is-active folder-types">
+                           <span class="panel-icon ">
+                           <i class="fas fa-book" aria-hidden="true"></i>
+                           </span>
+                           Folder Types
+                           </a>
+                           <a class="panel-block is-active saving-tips">
+                           <span class="panel-icon">
+                           <i class="fas fa-book" aria-hidden="true"></i>
+                           </span>
+                           Saving Tips
+                           </a>
+                           <a class="panel-block is-active complete-game">
+                           <span class="panel-icon">
+                           <i class="fas fa-book" aria-hidden="true"></i>
+                           </span>
+                           Complete Game
+                           </a>
+                        </div>
                      </div>
-                     <a class="panel-block is-active">
-                     <span class="panel-icon">
-                     <i class="fas fa-check-square" aria-hidden="true"></i>
-                     </span>
-                     Test
-                     </a>
-                     <a class="panel-block">
-                     <span class="panel-icon">
-                     <i class="fas fa-book" aria-hidden="true"></i>
-                     </span>
-                     marksheet
-                     </a>
-                     <a class="panel-block">
-                     <span class="panel-icon">
-                     <i class="fas fa-book" aria-hidden="true"></i>
-                     </span>
-                     minireset.css
-                     </a>
-                     <a class="panel-block">
-                     <span class="panel-icon">
-                     <i class="fas fa-book" aria-hidden="true"></i>
-                     </span>
-                     jgthms.github.io
-                     </a>
+                     <div class="animation-set-list list-section"></div>
+                     <div class="asset-set-list list-section"></div>
+                     <div class="physics-set-list list-section"></div>
+                     <div class="location-set-list list-section"></div>
+                     <div class="particle-set-list list-section"></div>
+                     <div class="ui-set-list list-section"></div>
+                     <div class="audio-set-list list-section"></div>
+                     <div class="networking-set-list list-section"></div>
+                  </article>
+               </div>
+               <div class="tile is-child box right-panel-reminder hidden-right-panel">
+                  <article class="panel is-success">
+                     <p class="panel-heading">
+                        Reminder
+                     </p>
+                     <p class="panel-tabs">
+                        <a class="is-active categories switchP2-category">P1</a>
+                        <a class="is-active categories keywords-category">Keywords</a>
+                        <a class="is-active categories variables-category">Variable</a>
+                        <a class="is-active categories methods-category">Methods</a>
+                        <a class="is-active categories class-category">Class</a>
+                     </p>
+                     <p class="panel-tabs">
+                        <a class="is-active categories use-method-category">Using Methods</a>
+                        <a class="is-active categories partial-category">Partial Class</a>
+                        <a class="is-active categories editor-category">Editor</a>
+                        <a class="is-active categories game-category">Game Order</a>
+                     </p>
+                     <div class="main-reminder-section list-section">
+                        <div class="panel-block">
+                           <p class="control has-icons-left">
+                              <input class="input is-success" type="text" placeholder="Search">
+                              <span class="icon is-left">
+                              <i class="fas fa-search" aria-hidden="true"></i>
+                              </span>
+                           </p>
+                        </div>
+                        <div class="">
+                           <a class="panel-block is-active">
+                           <span class="panel-icon">
+                           <i class="fas fa-book" aria-hidden="true"></i>
+                           </span>
+                           Animation Trigger
+                           </a>
+                           <a class="panel-block">
+                           <span class="panel-icon">
+                           <i class="fas fa-book" aria-hidden="true"></i>
+                           </span>
+                           marksheet
+                           </a>
+                           <a class="panel-block">
+                           <span class="panel-icon">
+                           <i class="fas fa-book" aria-hidden="true"></i>
+                           </span>
+                           minireset.css
+                           </a>
+                           <a class="panel-block">
+                           <span class="panel-icon">
+                           <i class="fas fa-book" aria-hidden="true"></i>
+                           </span>
+                           jgthms.github.io
+                           </a>
+                        </div>
+                     </div>
+                     <div class="keywords-set-list list-section"></div>
+                     <div class="variables-set-list list-section"></div>
+                     <div class="methods-set-list list-section"></div>
+                     <div class="class-set-list list-section"></div>
+                     <div class="using-methods-list list-section"></div>
+                     <div class="partial-class-list list-section"></div>
+                     <div class="editor-set-list list-section"></div>
+                     <div class="game-set-list list-section"></div>
                   </article>
                </div>
                <div class="card">
@@ -333,26 +453,26 @@
                      </button>
                   </header>
                   <div class="image-card-content hidden">
-                    <div class="card-image">
-                      <figure class="image is-16by9">
-                          <iframe class="has-ratio"  width="640" height="360" src="https://www.youtube.com/embed/JYkFm1Sc3v8" frameborder="0" allowfullscreen></iframe>
-                       </figure>
-                    </div>
-                    <div class="card-content">
-                      <div class="media">
-                        <div class="media-content">
-                          <p class="title is-4">John Smith</p>
-                          <p class="subtitle is-6">@johnsmith</p>
+                     <div class="card-image">
+                        <figure class="image is-16by9">
+                           <iframe class="has-ratio"  width="640" height="360" src="https://www.youtube.com/embed/JYkFm1Sc3v8" frameborder="0" allowfullscreen></iframe>
+                        </figure>
+                     </div>
+                     <div class="card-content">
+                        <div class="media">
+                           <div class="media-content">
+                              <p class="title is-4">John Smith</p>
+                              <p class="subtitle is-6">@johnsmith</p>
+                           </div>
                         </div>
-                      </div>
-                      <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                        <a href="#">#css</a> <a href="#">#responsive</a>
-                        <br>
-                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                      </div>
-                    </div>
+                        <div class="content">
+                           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                           Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                           <a href="#">#css</a> <a href="#">#responsive</a>
+                           <br>
+                           <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
