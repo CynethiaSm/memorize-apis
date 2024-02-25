@@ -95,6 +95,11 @@
                      </li>
                   </ul>
                </aside>
+               <div id="right-panel-links">
+                  <div>
+                     hi
+                  </div>
+               </div>
             </div>
          </div>
          <div class="hidden info-section">
@@ -126,190 +131,337 @@
             </article>
          </div>
          <!--  Middle Section  -->
-         <div class="tile is-child tile is-vertical is-7 pl-2 pr-4">
-            <div class=" px-5">
-               <div class="tile is-child box">
-                  <!--  Search  -->
-                  <input class="input is-rounded" type="text" placeholder="Search" id="searchInput"><!--  Search  -->
-               </div>
-               <div class="card my-5">
-                  <!--  Template  -->
-                  <header class="card-header template-bar">
-                     <p class="card-header-title">
-                        *Template
-                     </p>
-                     <button class="card-header-icon" aria-label="more options">
-                     <span class="icon">
-                     <i class="fas fa-angle-down" aria-hidden="true"></i>
-                     </span>
-                     </button>
-                  </header>
-                  <div class="card-content-template hidden">
-                     <div class="card-content">
-                        <div class="media">
-                           <div class="media-content">
-                              <p class="title is-4">Unity Script (.cs) Template</p>
+         <main class="tile is-child tile is-vertical is-7 pl-2 pr-4">
+            <div>
+               <div class=" px-5">
+                  <div class="tile is-child box">
+                     <!--  Search  -->
+                     <input class="input is-rounded tile-image" type="text" placeholder="Search" id="searchInput"><!--  Search  -->
+                  </div>
+                  <div class="card my-5">
+                     <!--  Template  -->
+                     <header class="card-header template-bar">
+                        <p class="card-header-title">
+                           *Template
+                        </p>
+                        <button class="card-header-icon" aria-label="more options">
+                        <span class="icon">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                        </button>
+                     </header>
+                     <div class="card-content-template hidden">
+                        <div class="card-content">
+                           <div class="media">
+                              <div class="media-content">
+                                 <p class="title is-4">Unity Script (.cs) Template</p>
+                              </div>
+                           </div>
+                           <div class="content">
+                              <div class="editor">
+                                 <div class="editor-pane">
+                                    <div class="input-header">
+                                       <div class="file-name">Unititled.cs</div>
+                                       C# Unity
+                                    </div>
+                                    <div class="file-window css-view">
+                                       <div class="line-numbers">
+                                          1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24
+                                       </div>
+                                       <input class="input-strobe" type="text" placeholder="Practice c#"/><span class="plus">+</span>
+                                       <div class="template-example">
+                                       <pre>
+   using UnityEngine
+   
+   public class Unititled : MonoBehavior {
+   
+       Rigidbody rb;
+       public GameObject cube;
+       float xInput;
+       floatzInput;
+   
+       void Start()
+       {
+           Destroy(gameObject, 3f);
+           rb = GetComponent&ltRigidbody&gt();
+       }
+   
+       void Update()
+       {
+       }
+   
+       private void OnMouseDown()
+       {
+           Destroy(gameObject);
+       }
+   }</pre>
+                                      </div>
+                                    </div>
+                                 </div>
+                                 <aside class="editor-pane html-view">
+                                    <div class="input-header">
+                                       <div class="file-name">ClassName.cs</div>
+                                       VS Code
+                                    </div>
+                                    <div class="file-window">
+                                       <div class="line-numbers">1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24</div>
+                                       <div class="markup"></div>
+                                    </div>
+                                 </aside>
+                              </div>
+                              <br>
+                              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                            </div>
                         </div>
-                        <div class="content">
-                           <div class="editor">
-                              <div class="editor-pane">
-                                 <div class="input-header">
-                                    <div class="file-name">Unititled.cs</div>
-                                    C# Unity
-                                 </div>
-                                 <div class="file-window css-view">
-                                    <div class="line-numbers">
-                                       1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24
-                                    </div>
-                                    <input class="input-strobe" type="text" placeholder="Practice c#"/><span class="plus">+</span>
-                                    <div></div>
-                                    <div>
-                                       <br/>
-                                       using UnityEngine<br/>
-                                       <br/>
-                                       public class Unititled : MonoBehavior {
-                                       <br/>
-                                       <br/>
-                                       Rigidbody rb;<br/>
-                                       public GameObject cube
-                                       float xInput;<br/>
-                                       floatzInput;<br/>
-                                       <br/>
-                                       void Start()<br/>
-                                       {<br/>
-                                       |    Destroy(gameObject, 3f);<br/>
-                                       |    rb = GetComponent<"Rigidbody">();<br/>
-                                       }<br/>
-                                       <br/>
-                                       void Update()<br/>
-                                       {<br/>
-                                       }<br/>
-                                       <br/>
-                                       private void OnMouseDown()
-                                       {<br/>
-                                       |    Destroy(gameObject);<br/>
-                                       }<br/>
-                                       }<br/>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="editor-pane html-view">
-                                 <div class="input-header">
-                                    <div class="file-name">ClassName.cs</div>
-                                    VS Code
-                                 </div>
-                                 <div class="file-window">
-                                    <div class="line-numbers">1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24</div>
-                                    <div class="markup"></div>
-                                 </div>
-                              </div>
+                     </div>
+                  </div>
+                  <div class="middle">
+                     <div class="mt-5 mb-4" style="display: grid;" id="tileContainer">
+                        <!--  Tiles Main -->
+                        <div>
+                           <div class="mx-1 pr-1 p-1 pr-3 hidden-middle-tile tile-middle" id="add-asset-unity" data-search-term="add asset">
+                              <a class="tile is-child box ">
+                                 <span class="gif-titles">Add Asset<br>in Unity</span>
+                                 <figure class="image is-128x128 pt-3">
+                                    <p><img class="is-rounded" id="middle-tile-images" class="mb-4" src="images/AddAsset.gif"></p>
+                                 </figure>
+                              </a>
                            </div>
-                           <br>
-                           <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                        </div>
+                        <div class="mx-1 pr-1 p-1 pr-3 hidden-middle-tile tile-middle" id="add-asset-import" data-search-term="add import asset">
+                           <a class="tile is-child box">
+                              <span class="gif-titles">Add Asset<br>Import</span>
+                              <figure class="image is-128x128 pt-3">
+                                 <p><img class="is-rounded" id="middle-tile-images" src="images/ImportAsset.gif"></p>
+                              </figure>
+                           </a>
+                        </div>
+                        <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" id="add-asset-spawning" data-search-term="add asset spawn">
+                           <a class="tile is-child box">
+                              <span class="gif-titles">Add Asset<br>Spawning</span>
+                              <figure class="image is-128x128 pt-3">
+                                 <p><img class="is-rounded" id="middle-tile-images" class="mb-4" src="images/AssetSpawn.gif"></p>
+                              </figure>
+                           </a>
+                        </div>
+                        <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" id="destroy-asset" data-search-term="asset destroy">
+                           <a class="tile is-child box">
+                              <span class="gif-titles">Destroy<br>Asset</span>
+                              <figure class="image is-128x128 pt-3">
+                                 <p><img class="is-rounded" id="middle-tile-images" class="mb-4" src="images/DestroyAsset.gif"></p>
+                              </figure>
+                           </a>
+                        </div>
+                        <div class="mx-1 p-1 pr-5 hidden-middle-tile tile-middle" id="player-movement" data-search-term="player movement">
+                           <a class="tile is-child box">
+                              <span class="gif-titles">Player<br>Movement</span>
+                              <figure class="image is-128x128 pt-3">
+                                 <p><img class="is-rounded" id="middle-tile-images" class="mb-4" src="images/PlayerMove.gif"></p>
+                              </figure>
+                           </a>
+                        </div>
+                        <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" id="physics-int" data-search-term="physics">
+                           <a class="tile is-child box">
+                              <span class="gif-titles">Physics<br>Interaction</span>
+                              <figure class="image is-128x128 pt-3">
+                                 <p><img class="is-rounded" id="middle-tile-images" class="mb-4" src="images/Physics.gif"></p>
+                              </figure>
+                           </a>
+                        </div>
+                        <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" id="animation-triggers" data-search-term="Animation">
+                           <a class="tile is-child box">
+                              <span class="gif-titles">Animation Triggers</span>
+                              <figure class="image is-128x128 pt-3">
+                                 <p><img class="is-rounded" id="middle-tile-images" class="mb-4" src="images/AnimTriggers.gif"></p>
+                              </figure>
+                           </a>
+                        </div>
+                        <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" id="camera-movement" data-search-term="camera">
+                           <a class="tile is-child box">
+                              <span class="gif-titles">Camera Movement</span>
+                              <figure class="image is-128x128 pt-3">
+                                 <p><img class="is-rounded" id="middle-tile-images" class="mb-4" src="images/Camera.gif"></p>
+                              </figure>
+                           </a>
+                        </div>
+                        <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" id="ui-int" data-search-term="UI">
+                           <a class="tile is-child box">
+                              <span class="gif-titles">UI<br>Integration</span>
+                              <figure class="image is-128x128 pt-3">
+                                 <p><img class="is-rounded" id="middle-tile-images" class="mb-4" src="images/UI.gif"></p>
+                              </figure>
+                           </a>
+                        </div>
+                        <div class="mx-1 p-1  pr-3 hidden-middle-tile tile-middle" id="audio-management" data-search-term="audio">
+                           <a class="tile is-child box">
+                              <span class="gif-titles">Audio Management</span>
+                              <figure class="image is-128x128 pt-3">
+                                 <p><img class="is-rounded" id="middle-tile-images" class="mb-4" src="images/Audio.gif"></p>
+                              </figure>
+                           </a>
+                        </div>
+                        <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" id="scorekeeping" data-search-term="score game logic">
+                           <a class="tile is-child box">
+                              <span class="gif-titles">Scorekeeping<br>Game Logic</span>
+                              <figure class="image is-128x128 pt-3">
+                                 <p><img class="is-rounded" id="middle-tile-images" class="mb-4" src="images/Score.gif"></p>
+                              </figure>
+                           </a>
+                        </div>
+                        <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" id="enemy-ai" data-search-term="enemy">
+                           <a class="tile is-child box">
+                              <span class="gif-titles">Enemy AI Function</span>
+                              <figure class="image is-128x128 pt-3">
+                                 <p><img class="is-rounded" id="middle-tile-images" class="mb-4" src="images/EnemyAI.gif"></p>
+                              </figure>
+                           </a>
+                        </div>
+                        <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" id="inventory-system" data-search-term="inventory">
+                           <a class="tile is-child box">
+                              <span class="gif-titles">Inventory System</span>
+                              <figure class="image is-128x128 pt-3">
+                                 <p><img class="is-rounded" id="middle-tile-images" class="mb-4" src="images/Inventory.gif"></p>
+                              </figure>
+                           </a>
+                        </div>
+                        <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" id="quest-system" data-search-term="quest mission system">
+                           <a class="tile is-child box">
+                              <span class="gif-titles">Quest<br>/Mission System</span>
+                              <figure class="image is-128x128 pt-3">
+                                 <p><img class="is-rounded" id="middle-tile-images" class="mb-4" src="images/Quest.gif"></p>
+                              </figure>
+                           </a>
+                        </div>
+                        <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" id="save-system" data-search-term="save load">
+                           <a class="tile is-child box">
+                              <span class="gif-titles">Save/Load System</span>
+                              <figure class="image is-128x128 pt-3">
+                                 <p><img class="is-rounded" id="middle-tile-images" class="mb-4" src="images/Save.gif"></p>
+                              </figure>
+                           </a>
+                        </div>
+                        <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" id="multiplayer-networking" data-search-term="multiplayer">
+                           <a class="tile is-child box">
+                              <span class="gif-titles">Multiplayer Networking</span>
+                              <figure class="image is-128x128 pt-3">
+                                 <p><img class="is-rounded" id="middle-tile-images" class="mb-4" src="images/Multiplayer.gif"></p>
+                              </figure>
+                           </a>
+                        </div>
+                        <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" id="particle-effects" data-search-term="partical effects">
+                           <a class="tile is-child box">
+                              <span class="gif-titles">Particle Effects</span>
+                              <figure class="image is-128x128 pt-3">
+                                 <p><img class="is-rounded" id="middle-tile-images" class="mb-4" src="images/Partical.gif"></p>
+                              </figure>
+                           </a>
+                        </div>
+                        <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" id="terrain" data-search-term="Terrain Generation">
+                           <a class="tile is-child box">
+                              <span class="gif-titles">Terrain Generation</span>
+                              <figure class="image is-128x128 pt-3">
+                                 <p><img class="is-rounded" id="middle-tile-images" class="mb-4" src="images/Terrain.gif"></p>
+                              </figure>
+                           </a>
+                        </div>
+                        <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" id="localization" data-search-term="Localization Support">
+                           <a class="tile is-child box">
+                              <span class="gif-titles">Localization Support</span>
+                              <figure class="image is-128x128 pt-3">
+                                 <p><img class="is-rounded" id="middle-tile-images" class="mb-4" src="images/Localization.gif"></p>
+                              </figure>
+                           </a>
+                        </div>
+                        <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" id="analytics" data-search-term="Analytics Integration">
+                           <a class="tile is-child box">
+                              <span class="gif-titles">Analytics Integration</span>
+                              <figure class="image is-128x128 pt-3">
+                                 <p><img class="is-rounded" id="middle-tile-images" class="mb-4" src="images/Analytics.gif"></p>
+                              </figure>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="tile is-ancestor sectionInfo" style="display: block;" id="tile-info-section">
+                        <div class="tile is-12 is-vertical is-parent">
+                          <div class="tile is-child box">
+                           <div id="tile-info">
+                              <div class= "middle-information" id="T1"></div>
+                              <div class= "middle-information" id="T2"></div>
+                              <div class= "middle-information" id="T3"></div>
+                              <div class= "middle-information" id="T4"></div>
+                              <div class= "middle-information" id="T5"></div>
+                              <div class= "middle-information" id="T6"></div>
+                              <div class= "middle-information" id="T7"></div>
+                              <div class= "middle-information" id="T8"></div>
+                              <div class= "middle-information" id="T9"></div>
+                              <div class= "middle-information" id="T10"></div>
+                              <div class= "middle-information" id="T11"></div>
+                              <div class= "middle-information" id="T12"></div>
+                              <div class= "middle-information" id="T13"></div>
+                              <div class= "middle-information" id="T14"></div>
+                              <div class= "middle-information" id="T15"></div>
+                              <div class= "middle-information" id="T16"></div>
+                              <div class= "middle-information" id="T17"></div>
+                              <div class= "middle-information" id="T18"></div>
+                              <div class= "middle-information" id="T19"></div>
+                              <div class= "middle-information" id="T20"></div>
+                           </div>
+                          </div>
+                        </div>
+                     </div>
+                     <div class="tile is-ancestor sectionInfo" style="display: block;" id="tile-info-left">
+                        <div class="tile is-12 is-vertical is-parent">
+                          <div class="tile is-child box">
+                           <div id="tile-info">
+                              <div class= "middle-information" id="T21"></div>
+                              <div class= "middle-information" id="T22"></div>
+                              <div class= "middle-information" id="T23"></div>
+                              <div class= "middle-information" id="T24"></div>
+                              <div class= "middle-information" id="T25"></div>
+                              <div class= "middle-information" id="T26"></div>
+                              <div class= "middle-information" id="T27"></div>
+                              <div class= "middle-information" id="T28"></div>
+                              <div class= "middle-information" id="T29"></div>
+                              <div class= "middle-information" id="T30"></div>
+                              <div class= "middle-information" id="T31"></div>
+                              <div class= "middle-information" id="T32"></div>
+                              <div class= "middle-information" id="T33"></div>
+                              <div class= "middle-information" id="T34"></div>
+                              <div class= "middle-information" id="T35"></div>
+                              <div class= "middle-information" id="T36"></div>
+                              <div class= "middle-information" id="T37"></div>
+                              <div class= "middle-information" id="T38"></div>
+                              <div class= "middle-information" id="T39"></div>
+                              <div class= "middle-information" id="T40"></div>
+                           </div>
+                          </div>
+                        </div>
+                     </div>
+                     <div class="tile is-ancestor sectionInfo" style="display: block;" id="tile-info-right">
+                        <div class="tile is-12 is-vertical is-parent">
+                          <div class="tile is-child box">
+                           <div id="tile-info">
+                              <div class= "middle-information" id="T41-Levels"></div>
+                           </div>
+                          </div>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="mt-5 mb-4" id="tileContainer">
-                  <!--  Tiles Main -->
-                  <div>
-                     <div class="mx-1 pr-1 p-1 pr-3 hidden-middle-tile tile-middle" id="add-asset-unity" data-search-term="add asset">
-                        <a class="tile is-child box ">
-                           <span class="gif-titles">Add Asset<br>in Unity</span>
-                           <figure class="image is-128x128 pt-3">
-                              <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                           </figure>
-                        </a>
-                     </div>
-                  </div>
-                  <div class="mx-1 pr-1 p-1 pr-3 hidden-middle-tile tile-middle" data-search-term="add import asset">
-                     <a class="tile is-child box">
-                        <span class="gif-titles">Add Asset<br>Import</span>
-                        <figure class="image is-128x128 pt-3">
-                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                        </figure>
-                     </a>
-                  </div>
-                  <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" data-search-term="add asset spawn">
-                     <a class="tile is-child box">
-                        <span class="gif-titles">Add Asset<br>Spawning</span>
-                        <figure class="image is-128x128 pt-3">
-                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                        </figure>
-                     </a>
-                  </div>
-                  <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" data-search-term="asset destroy">
-                     <a class="tile is-child box">
-                        <span class="gif-titles">Destroy<br>Asset</span>
-                        <figure class="image is-128x128 pt-3">
-                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                        </figure>
-                     </a>
-                  </div>
-                  <div class="mx-1 p-1 pr-5 hidden-middle-tile tile-middle" data-search-term="animation">
-                     <a class="tile is-child box">
-                        <span class="gif-titles">Animation3<br>Animation</span>
-                        <figure class="image is-128x128 pt-3">
-                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                        </figure>
-                     </a>
-                  </div>
-                  <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" data-search-term="assets">
-                     <a class="tile is-child box">
-                        <span class="gif-titles">Assets3</span>
-                        <figure class="image is-128x128 pt-3">
-                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                        </figure>
-                     </a>
-                  </div>
-                  <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" data-search-term="animation">
-                     <a class="tile is-child box">
-                        <span class="gif-titles">Animation4</span>
-                        <figure class="image is-128x128 pt-3">
-                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                        </figure>
-                     </a>
-                  </div>
-                  <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" data-search-term="assets">
-                     <a class="tile is-child box">
-                        <span class="gif-titles">Assets4</span>
-                        <figure class="image is-128x128 pt-3">
-                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                        </figure>
-                     </a>
-                  </div>
-                  <div class="mx-1 p-1  pr-3 hidden-middle-tile tile-middle" data-search-term="animation 5">
-                     <a class="tile is-child box">
-                        <span class="gif-titles">Animation5</span>
-                        <figure class="image is-128x128 pt-3">
-                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                        </figure>
-                     </a>
-                  </div>
-                  <div class="mx-1 p-1 pr-3 hidden-middle-tile tile-middle" data-search-term="assets 5">
-                     <a class="tile is-child box">
-                        <span class="gif-titles">Assets5</span>
-                        <figure class="image is-128x128 pt-3">
-                           <p><img class="is-rounded" class="mb-4" src="images/Sparkle.gif"></p>
-                        </figure>
-                     </a>
-                  </div>
+               <div class="navigation-bar pt-5 ">
+                  <nav class="breadcrumb aria-label="breadcrumbs">
+                  <!--   navigation to other pages   -->
+                  <ul>
+                     <li class="is-active"><a href="#" aria-current="page">Unity API</a></li>
+                     <li><a href="#" target="_parent">Git</a></li>
+                     <li><a href="https://htmlreference.io/" target="_parent">Html</a></li>
+                     <li><a href="https://cssreference.io/" target="_parent">CSS</a></li>
+                     <li><a href="#" target="_parent">JavaScript</a></li>
+                     <li><a href="#" target="_parent">Python</a></li>
+                  </ul>
                </div>
             </div>
-            <div class="navigation-bar pt-5 ">
-               <nav class="breadcrumb aria-label="breadcrumbs">
-               <!--   navigation to other pages   -->
-               <ul>
-                  <li class="is-active"><a href="#" aria-current="page">Unity API</a></li>
-                  <li><a href="#" target="_parent">Git</a></li>
-                  <li><a href="https://htmlreference.io/" target="_parent">Html</a></li>
-                  <li><a href="https://cssreference.io/" target="_parent">CSS</a></li>
-                  <li><a href="#" target="_parent">JavaScript</a></li>
-                  <li><a href="#" target="_parent">Python</a></li>
-               </ul>
-            </div>
-         </div>
+         </main>
          <div class="tile is-child">
             <!--  Right Section  -->
             <div class="tile is-11 is-vertical">
@@ -334,32 +486,38 @@
                      <div class="main-common-section list-section">
                         <div class="panel-block">
                            <p class="control has-icons-left">
-                              <input class="input is-success" type="text" placeholder="Search">
+                              <input class="input is-success" type="text" placeholder="Search" id="searchListInput">
                               <span class="icon is-left">
                               <i class="fas fa-search" aria-hidden="true"></i>
                               </span>
                            </p>
                         </div>
-                        <div class="">
-                           <a class="panel-block is-active levels">
+                        <div id="list-container">
+                           <a class="panel-block is-active hidden-list-section" data-list-search-term="levels" id="levels">
                            <span class="panel-icon">
                            <i class="fas fa-book" aria-hidden="true"></i>
                            </span>
                            Levels
                            </a>
-                           <a class="panel-block is-active folder-types">
+                           <a class="panel-block is-active hidden-list-section"  data-list-search-term="folder" id="folders">
                            <span class="panel-icon ">
                            <i class="fas fa-book" aria-hidden="true"></i>
                            </span>
                            Folder Types
                            </a>
-                           <a class="panel-block is-active saving-tips">
+                           <a class="panel-block is-active hidden-list-section"  data-list-search-term="loading" id="loading">
+                           <span class="panel-icon">
+                           <i class="fas fa-book" aria-hidden="true"></i>
+                           </span>
+                           Loading Optimize
+                           </a>
+                           <a class="panel-block is-active hidden-list-section"  data-list-search-term="saving" id="saving">
                            <span class="panel-icon">
                            <i class="fas fa-book" aria-hidden="true"></i>
                            </span>
                            Saving Tips
                            </a>
-                           <a class="panel-block is-active complete-game">
+                           <a class="panel-block is-active hidden-list-section"  data-list-search-term="complete game" id="complete-game">
                            <span class="panel-icon">
                            <i class="fas fa-book" aria-hidden="true"></i>
                            </span>
@@ -409,19 +567,19 @@
                            <span class="panel-icon">
                            <i class="fas fa-book" aria-hidden="true"></i>
                            </span>
-                           Animation Trigger
+                           Procedural Animation
                            </a>
                            <a class="panel-block">
                            <span class="panel-icon">
                            <i class="fas fa-book" aria-hidden="true"></i>
                            </span>
-                           marksheet
+                           Procedural Destroy
                            </a>
                            <a class="panel-block">
                            <span class="panel-icon">
                            <i class="fas fa-book" aria-hidden="true"></i>
                            </span>
-                           minireset.css
+                           Procedural Generation
                            </a>
                            <a class="panel-block">
                            <span class="panel-icon">

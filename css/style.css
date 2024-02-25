@@ -1,6 +1,6 @@
 html,body {
     background-color: rgba(50, 115, 220, 0.3);
-    height: 2100px;
+    height: 2500px;
 }
 
 
@@ -58,8 +58,104 @@ html,body {
     grid-auto-rows: auto;
     gap: 1rem;
     justify-content: flex-start;
+    transition: grid-template-columns .3s;
 }
 
+.tile-middle{
+  flex: 1;
+  overflow:hidden;
+  transition: 0.5s;
+}
+
+.tile-middle:hover{
+  flex: 1;
+  transform: rotate(-6deg) scale(1.2);
+  transition: 0.5s;
+}
+
+.tile-middle:hover img {
+  object-fit: cover;
+  padding: 5px;
+  border-radius: 10px;
+  transform: scale(1.8);
+}
+
+.tile-middle:hover ~ .tile-middle {
+  transition: 0.5s;
+  transform: translateX(30px); 
+}
+
+.flex-body {
+  display: flex;
+}
+
+.left-info {
+  flex: 1;
+  padding: 10px;
+  /*border: 4px dotted rgb(236, 227, 227);*/
+}
+
+.right-info {
+  padding: 10px;
+  width: 380px;
+  /*border: 4px dotted rgb(236, 227, 227);*/
+}
+
+.dots {
+  color: rgb(230, 215, 215);
+  font-size: 130%;
+  padding: 15px;
+  font-weight: 900;
+  position: absolute;
+  bottom: -10px;
+}
+
+.top-image {
+  background-color: rgb(233, 230, 230);
+  border-radius: 6px 6px 0px 0px;
+  height: 11%;
+  width: 100.3%;
+  position: relative;
+  
+}
+
+.all-photos {
+  box-shadow: 2px 2px 3px rgb(20, 20, 20);
+}
+
+.all-photos:hover {
+  object-fit: cover;
+  padding: 5px;
+  border-radius: 10px;
+  transform: scale(1.6);
+}
+
+.background-line {
+  height: 2px;
+  width: 913px;
+  background-color:rgb(142, 204, 204);
+}
+
+.background {
+  height: 10px;
+  width: 913px;
+  padding: 20px;
+  background: linear-gradient(to bottom, rgba(142, 204, 204, 0.5), rgba(178, 212, 240, 0.3), rgba(255, 255, 255, 1));
+  filter: blur(1px);
+}
+
+.title {
+  font-size: medium;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.describe {
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 20;
+  background-color: rgb(250, 209, 27);
+
+}
 
 /* bottom navigation bar */
 .navigation-bar {
@@ -214,9 +310,19 @@ html,body {
     transition: opacity 0.3s ease;
 }
 
+.hidden-middle {
+  display: none;
+  transition: display 0.3s ease;
+}
+
 .hidden-right-panel {
     opacity: 0;
     transition: opacity 0.3s ease;
+}
+
+.hidden-list-section {
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .hidden {
