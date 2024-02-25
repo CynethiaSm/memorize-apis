@@ -104,6 +104,7 @@ function handleSearchBar() {
     const searchInput = document.getElementById('searchInput');
     const tiles = document.querySelectorAll('[data-search-term]');
     const tileContainer = document.getElementById('tileContainer');
+    const middle = document.querySelector('.middle');
     const mainButton = document.querySelector('.main-button');
     const originalOrder = Array.from(tiles);
 
@@ -168,26 +169,7 @@ function handleSearchBar() {
     mainButton.addEventListener('click', toggleMain);
 }
 
-//Handle clicking a tile and showing information - Middle
-function handleIndividualTile() {
-    const addAssetUnity = document.getElementById('add-asset-unity');
-    const allTiles = document.querySelectorAll('.tile-middle');
-
-    function showTileInformation() {
-        allTiles.forEach(function(tile) {
-            tile.classList.toggle('hidden-middle-tile');
-            setTimeout(() => {
-                tile.classList.replace('hidden-middle-tile', 'hidden');
-            }, 450); // Adjust the delay as needed
-        })
-        addAssetUnity.classList.remove('hidden-middle-tile');
-    }
-
-    addAssetUnity.addEventListener('click', showTileInformation);
-
-}
-
-//Handles switching active green when clicking one of the list words
+//Handles switching active green when clicking one of the list words - Right
 function switchActiveList() {
  
      // Remove the is-active class from all
@@ -219,6 +201,59 @@ function switchActiveList() {
     document.addEventListener('click', switchActive);
  
  }
+
+ //Handles Searching Lists - Right
+function handleSearchingList() {
+    const searchListInput = document.getElementById('searchListInput');
+    const lists = document.querySelectorAll('[data-list-search-term]');
+    const listContainer = document.getElementById('list-container');
+    const originalListOrder = Array.from(lists);
+
+    // Remove the 'hidden' class from all tiles initially
+    lists.forEach(function(list) {
+        list.classList.remove('hidden-list-section');
+    });
+
+    function arrangeList(visibleLists) {
+        // Delay clearing the layout to allow CSS transitions to complete
+        setTimeout(function() {
+            // Clear existing grid layout
+            listContainer.innerHTML = '';
+    
+            // Append visible tiles to the tile container in their original order
+            visibleLists.forEach(function(lists) {
+                listContainer.appendChild(lists);
+            });
+        }, 200); // Adjust the delay time as needed
+    }
+    
+
+    function toggleListSearch() {
+        const inputListValue = searchListInput.value.trim().toLowerCase();
+
+        // Filter tiles based on search term
+        const visibleLists = originalListOrder.filter(function(list) {
+            const searchTerm = list.getAttribute('data-list-search-term').toLowerCase();
+            const match = searchTerm.includes(inputListValue);
+            return inputListValue === '' || match;
+        });
+
+        // Toggle visibility of tiles
+        lists.forEach(function(listElement) {
+            const searchTerm = listElement.getAttribute('data-list-search-term').toLowerCase();
+            const match = searchTerm.includes(inputListValue);
+            listElement.classList.toggle('hidden-list-section', inputListValue !== '' && !match);
+        });
+
+        // Arrange tiles after toggling visibility
+        arrangeList(visibleLists);
+    }
+
+    // Initial arrangement of tiles
+    arrangeList(originalListOrder);
+
+    searchListInput.addEventListener('input', toggleListSearch);
+}
 
 
 
@@ -275,15 +310,15 @@ function activeCategoryAndList() {
             animationSetList.innerHTML = `
                 <div class="panel-block">
                     <p class="control has-icons-left">
-                        <input class="input is-success" type="text" placeholder="Search">
+                        <input class="input is-success" type="text" placeholder="Search" id="searchListInput">
                         <span class="icon is-left">
                             <i class="fas fa-search" aria-hidden="true"></i>
                         </span>
                     </p>
                 </div>
-                <div class="">
+                <div class="list-container">
                     ${animCategories.map(category => `
-                        <a id="${category.id}" class="panel-block is-active">
+                        <a class="panel-block is-active" id="${category.id}">
                             <span class="panel-icon">
                                 <i class="fas fa-book" aria-hidden="true"></i>
                             </span>
@@ -313,15 +348,15 @@ function activeCategoryAndList() {
             assetSetList.innerHTML = `
                 <div class="panel-block">
                     <p class="control has-icons-left">
-                        <input class="input is-success" type="text" placeholder="Search">
+                        <input class="input is-success" type="text" placeholder="Search" id="searchListInput">
                         <span class="icon is-left">
                             <i class="fas fa-search" aria-hidden="true"></i>
                         </span>
                     </p>
                 </div>
-                <div class="">
+                <div class="list-container">
                     ${assetCategories.map(category => `
-                        <a id="${category.id}" class="panel-block is-active">
+                        <a class="panel-block is-active">
                             <span class="panel-icon">
                                 <i class="fas fa-book" aria-hidden="true"></i>
                             </span>
@@ -351,13 +386,13 @@ function activeCategoryAndList() {
             physicsSetList.innerHTML = `
                 <div class="panel-block">
                     <p class="control has-icons-left">
-                        <input class="input is-success" type="text" placeholder="Search">
+                        <input class="input is-success" type="text" placeholder="Search" id="searchListInput">
                         <span class="icon is-left">
                             <i class="fas fa-search" aria-hidden="true"></i>
                         </span>
                     </p>
                 </div>
-                <div class="">
+                <div class="list-container">
                     ${physicsCategories.map(category => `
                         <a id="${category.id}" class="panel-block is-active">
                             <span class="panel-icon">
@@ -390,13 +425,13 @@ function activeCategoryAndList() {
             locationSetList.innerHTML = `
                 <div class="panel-block">
                     <p class="control has-icons-left">
-                        <input class="input is-success" type="text" placeholder="Search">
+                        <input class="input is-success" type="text" placeholder="Search" id="searchListInput">
                         <span class="icon is-left">
                             <i class="fas fa-search" aria-hidden="true"></i>
                         </span>
                     </p>
                 </div>
-                <div class="">
+                <div class="list-container">
                     ${locationCategories.map(category => `
                         <a id="${category.id}" class="panel-block is-active">
                             <span class="panel-icon">
@@ -429,13 +464,13 @@ function activeCategoryAndList() {
             particalSetList.innerHTML = `
                 <div class="panel-block">
                     <p class="control has-icons-left">
-                        <input class="input is-success" type="text" placeholder="Search">
+                        <input class="input is-success" type="text" placeholder="Search" id="searchListInput">
                         <span class="icon is-left">
                             <i class="fas fa-search" aria-hidden="true"></i>
                         </span>
                     </p>
                 </div>
-                <div class="">
+                <div class="list-container">
                     ${assetCategories.map(category => `
                         <a id="${category.id}" class="panel-block is-active">
                             <span class="panel-icon">
@@ -468,13 +503,13 @@ function activeCategoryAndList() {
             uiSetList.innerHTML = `
                 <div class="panel-block">
                     <p class="control has-icons-left">
-                        <input class="input is-success" type="text" placeholder="Search">
+                        <input class="input is-success" type="text" placeholder="Search" id="searchListInput">
                         <span class="icon is-left">
                             <i class="fas fa-search" aria-hidden="true"></i>
                         </span>
                     </p>
                 </div>
-                <div class="">
+                <div class="list-container">
                     ${assetCategories.map(category => `
                         <a id="${category.id}" class="panel-block is-active">
                             <span class="panel-icon">
@@ -507,13 +542,13 @@ function activeCategoryAndList() {
             audioCategorySetList.innerHTML = `
                 <div class="panel-block">
                     <p class="control has-icons-left">
-                        <input class="input is-success" type="text" placeholder="Search">
+                        <input class="input is-success" type="text" placeholder="Search" id="searchListInput">
                         <span class="icon is-left">
                             <i class="fas fa-search" aria-hidden="true"></i>
                         </span>
                     </p>
                 </div>
-                <div class="">
+                <div class="list-container">
                     ${assetCategories.map(category => `
                         <a id="${category.id}" class="panel-block is-active">
                             <span class="panel-icon">
@@ -546,13 +581,13 @@ function activeCategoryAndList() {
             networkingSetList.innerHTML = `
                 <div class="panel-block">
                     <p class="control has-icons-left">
-                        <input class="input is-success" type="text" placeholder="Search">
+                        <input class="input is-success" type="text" placeholder="Search" id="searchListInput">
                         <span class="icon is-left">
                             <i class="fas fa-search" aria-hidden="true"></i>
                         </span>
                     </p>
                 </div>
-                <div class="">
+                <div class="list-container">
                     ${assetCategories.map(category => `
                         <a id="${category.id}" class="panel-block is-active">
                             <span class="panel-icon">
@@ -585,13 +620,13 @@ function activeCategoryAndList() {
             keywordsSetList.innerHTML = `
                 <div class="panel-block">
                     <p class="control has-icons-left">
-                        <input class="input is-success" type="text" placeholder="Search">
+                        <input class="input is-success" type="text" placeholder="Search" id="searchListInput">
                         <span class="icon is-left">
                             <i class="fas fa-search" aria-hidden="true"></i>
                         </span>
                     </p>
                 </div>
-                <div class="">
+                <div class="list-container">
                     ${assetCategories.map(category => `
                         <a id="${category.id}" class="panel-block is-active">
                             <span class="panel-icon">
@@ -627,13 +662,13 @@ function activeCategoryAndList() {
             variablesSetList.innerHTML = `
                 <div class="panel-block">
                     <p class="control has-icons-left">
-                        <input class="input is-success" type="text" placeholder="Search">
+                        <input class="input is-success" type="text" placeholder="Search" id="searchListInput">
                         <span class="icon is-left">
                             <i class="fas fa-search" aria-hidden="true"></i>
                         </span>
                     </p>
                 </div>
-                <div class="">
+                <div class="list-container">
                     ${assetCategories.map(category => `
                         <a id="${category.id}" class="panel-block is-active">
                             <span class="panel-icon">
@@ -666,13 +701,13 @@ function activeCategoryAndList() {
             methodsSetList.innerHTML = `
                 <div class="panel-block">
                     <p class="control has-icons-left">
-                        <input class="input is-success" type="text" placeholder="Search">
+                        <input class="input is-success" type="text" placeholder="Search" id="searchListInput">
                         <span class="icon is-left">
                             <i class="fas fa-search" aria-hidden="true"></i>
                         </span>
                     </p>
                 </div>
-                <div class="">
+                <div class="list-container">
                     ${assetCategories.map(category => `
                         <a id="${category.id}" class="panel-block is-active">
                             <span class="panel-icon">
@@ -705,13 +740,13 @@ function activeCategoryAndList() {
             classSetList.innerHTML = `
                 <div class="panel-block">
                     <p class="control has-icons-left">
-                        <input class="input is-success" type="text" placeholder="Search">
+                        <input class="input is-success" type="text" placeholder="Search" id="searchListInput">
                         <span class="icon is-left">
                             <i class="fas fa-search" aria-hidden="true"></i>
                         </span>
                     </p>
                 </div>
-                <div class="">
+                <div class="list-container">
                     ${assetCategories.map(category => `
                         <a id="${category.id}" class="panel-block is-active">
                             <span class="panel-icon">
@@ -754,13 +789,13 @@ function activeCategoryAndList() {
             usingMethodsSetList.innerHTML = `
                 <div class="panel-block">
                     <p class="control has-icons-left">
-                        <input class="input is-success" type="text" placeholder="Search">
+                        <input class="input is-success" type="text" placeholder="Search" id="searchListInput">
                         <span class="icon is-left">
                             <i class="fas fa-search" aria-hidden="true"></i>
                         </span>
                     </p>
                 </div>
-                <div class="">
+                <div class="list-container">
                     ${assetCategories.map(category => `
                         <a id="${category.id}" class="panel-block is-active">
                             <span class="panel-icon">
@@ -793,13 +828,13 @@ function activeCategoryAndList() {
             partialClassSetList.innerHTML = `
                 <div class="panel-block">
                     <p class="control has-icons-left">
-                        <input class="input is-success" type="text" placeholder="Search">
+                        <input class="input is-success" type="text" placeholder="Search" id="searchListInput">
                         <span class="icon is-left">
                             <i class="fas fa-search" aria-hidden="true"></i>
                         </span>
                     </p>
                 </div>
-                <div class="">
+                <div class="list-container">
                     ${assetCategories.map(category => `
                         <a id="${category.id}" class="panel-block is-active">
                             <span class="panel-icon">
@@ -832,13 +867,13 @@ function activeCategoryAndList() {
             editorSetList.innerHTML = `
                 <div class="panel-block">
                     <p class="control has-icons-left">
-                        <input class="input is-success" type="text" placeholder="Search">
+                        <input class="input is-success" type="text" placeholder="Search" id="searchListInput">
                         <span class="icon is-left">
                             <i class="fas fa-search" aria-hidden="true"></i>
                         </span>
                     </p>
                 </div>
-                <div class="">
+                <div class="list-container">
                     ${assetCategories.map(category => `
                         <a id="${category.id}" class="panel-block is-active">
                             <span class="panel-icon">
@@ -871,13 +906,13 @@ function activeCategoryAndList() {
             gameSetList.innerHTML = `
                 <div class="panel-block">
                     <p class="control has-icons-left">
-                        <input class="input is-success" type="text" placeholder="Search">
+                        <input class="input is-success" type="text" placeholder="Search" id="searchListInput">
                         <span class="icon is-left">
                             <i class="fas fa-search" aria-hidden="true"></i>
                         </span>
                     </p>
                 </div>
-                <div class="">
+                <div class="list-container">
                     ${assetCategories.map(category => `
                         <a id="${category.id}" class="panel-block is-active">
                             <span class="panel-icon">
@@ -1193,7 +1228,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeInnerLayers();
     cardToggle();
     handleSearchBar();
-    handleIndividualTile();
+    handleSearchingList();
     activeCategoryAndList()
     switchRightPanels();
     switchActiveList();
