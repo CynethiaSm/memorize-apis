@@ -288,23 +288,23 @@ function activeCategoryAndList() {
     function switchCategoryList(event) {
         if (event.target.classList.contains('anim-category')) {
             const animCategories = [
-                { "name": "Animation Clips", "id": "animation-clips" },
-                { "name": "Animator Controller", "id": "animator-controller" },
-                { "name": "Animation Events", "id": "animation-events" },
-                { "name": "Blend Trees", "id": "blend-trees" },
-                { "name": "Animation Curves", "id": "animation-curves" },
-                { "name": "Animation Rigging", "id": "animation-rigging" },
-                { "name": "Mecanim", "id": "mecanim" },
-                { "name": "Animation Layers", "id": "animation-layers" },
-                { "name": "State Machines", "id": "state-machines" },
-                { "name": "Keyframe Animation", "id": "keyframe-animation" },
-                { "name": "Scripted Animation", "id": "scripted-animation" },
-                { "name": "Physics-based Animation", "id": "physics-based-animation" },
-                { "name": "Particle Systems", "id": "particle-systems" },
-                { "name": "Timeline", "id": "timeline" },
-                { "name": "2D Animation", "id": "2d-animation" },
-                { "name": "Procedural Animation", "id": "procedural-animation" },
-                { "name": "Animation Blending", "id": "animation-blending" }
+                { "name": "Animation Clips", "id": "animation-clips", },
+                { "name": "Animator Controller", "id": "animator-controller", },
+                { "name": "Animation Events", "id": "animation-events", },
+                { "name": "Blend Trees", "id": "blend-trees", },
+                { "name": "Animation Curves", "id": "animation-curves", },
+                { "name": "Animation Rigging", "id": "animation-rigging", },
+                { "name": "Mecanim", "id": "mecanim", },
+                { "name": "Animation Layers", "id": "animation-layers", },
+                { "name": "State Machines", "id": "state-machines", },
+                { "name": "Keyframe Animation", "id": "keyframe-animation", },
+                { "name": "Scripted Animation", "id": "scripted-animation", },
+                { "name": "Physics-based Animation", "id": "physics-based-animation", },
+                { "name": "Particle Systems", "id": "particle-systems", },
+                { "name": "Timeline", "id": "timeline", },
+                { "name": "2D Animation", "id": "2d-animation", },
+                { "name": "Procedural Animation", "id": "procedural-animation", },
+                { "name": "Animation Blending", "id": "animation-blending", }
             ];
     
             animationSetList.innerHTML = `
@@ -603,6 +603,7 @@ function activeCategoryAndList() {
                 { "name": "GameObject", "id": "game-object" },
                 { "name": "Transform", "id": "transform" },
                 { "name": "MonoBehaviour", "id": "mono-behaviour" },
+                { "name": "new", "id": "new-keyword" },
                 { "name": "Start", "id": "start" },
                 { "name": "Update", "id": "update" },
                 { "name": "FixedUpdate", "id": "fixed-update" },
@@ -640,8 +641,8 @@ function activeCategoryAndList() {
         else if (event.target.classList.contains('variables-category')) {
             const assetCategories = [
                 { "name": "Variable Declaration", "id": "variable-declaration" },
+                { "name": "Variable Initialize", "id": "variable-initialize" },
                 { "name": "var", "id": "var" },
-                { "name": "let", "id": "let" },
                 { "name": "const", "id": "const" },
                 { "name": "Data Types", "id": "data-types" },
                 { "name": "Primitive Types", "id": "primitive-types" },
@@ -721,6 +722,7 @@ function activeCategoryAndList() {
         else if (event.target.classList.contains('class-category')) {
             const assetCategories = [
                 { "name": "Class Declaration", "id": "class-declaration" },
+                { "name": "Class Instance", "id": "class-instance" },
                 { "name": "Constructor", "id": "constructor" },
                 { "name": "Properties", "id": "properties" },
                 { "name": "Fields", "id": "fields" },
@@ -847,6 +849,7 @@ function activeCategoryAndList() {
         } 
         else if (event.target.classList.contains('editor-category')) {
             const assetCategories = [
+                { "name": "Tags", "id": "tags" },
                 { "name": "Editor Scripting", "id": "editor-scripting" },
                 { "name": "Custom Inspectors", "id": "custom-inspectors" },
                 { "name": "Editor Windows", "id": "editor-windows" },
